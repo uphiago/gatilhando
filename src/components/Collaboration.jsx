@@ -10,9 +10,9 @@ const Collaboration = () => {
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">
-            AI Chat App for seemless
+            Sua Gestão Pronta para o {}
             <span className="inline-block relative font-semibold">
-              collaboration
+              Futuro.
               <img
                 src={curve}
                 className="absolute top-full left-0 w-full xl:-mt-2 pointer-events-none select-none"
@@ -44,7 +44,7 @@ const Collaboration = () => {
             ))}
           </ul>
 
-          <Button>Try it now</Button>
+          <Button>Converse Conosco</Button>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">

@@ -14,9 +14,9 @@ const Benefits = () => {
           className="md:max-w-md lg:max-w-2xl"
           title={
             <>
-              Chat Smarter, Not Harder with{" "}
+              Agilize sua rotina com{" "}
               <span className="inline-block relative font-semibold">
-                Brainwave
+                Gatilhando.
                 <img
                   src={curve}
                   className="absolute top-full left-0 w-full xl:-mt-2 pointer-events-none select-none"
@@ -40,7 +40,7 @@ const Benefits = () => {
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
                 <h5 className="h5 mb-5">{benefit.title}</h5>
-                <p className="body-2 mb-6 text-n-3">{benefit.text}</p>
+                <p className="body-3 mb-6 text-n-3">{benefit.text}</p>
                 <div className="flex items-center mt-auto">
                   <img
                     src={benefit.iconUrl}
@@ -49,10 +49,10 @@ const Benefits = () => {
                     alt={benefit.title}
                   />
 
-                  <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
+                  {/* <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
                     Explore more
                   </p>
-                  <Arrow />
+                  <Arrow /> */}
                 </div>
               </div>
 

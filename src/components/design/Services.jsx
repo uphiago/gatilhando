@@ -30,11 +30,11 @@ export const PhotoChatMessage = () => {
       <Typewriter
         options={{
           strings: [
-            "Hey Brainwave, enhance this photo.",
-            "Hey Brainwave, give this photo a boost.",
-            "Brainwave, enhance the details in this photo.",
-            "Activate Brainwave mode to refine this photo.",
-            "Brainwave, apply your magic to this photo.",
+            "Hey, automatize este processo.",
+            "Dispare uma automação para esta tarefa.",
+            "Padronize as rotinas deste workflow.",
+            "Aplicar automação inteligente aqui.",
+            "Monitorar operação em tempo real.",
           ],
           autoStart: true,
           loop: true,
@@ -50,7 +50,7 @@ export const VideoChatMessage = ({ isPlaying }) => {
     <div className="absolute top-8 left-[3.125rem] w-full max-w-[14rem] pt-2.5 pr-2.5 pb-7 pl-5 bg-n-6 rounded-t-xl rounded-br-xl font-code text-base md:max-w-[17.5rem]">
       <Typewriter
         options={{
-          strings: isPlaying ? ["Video generating..."] : ["Video generated!"],
+          strings: isPlaying ? ["Sincronizando Dados..."] : ["Dados Sincronizados!"],
           cursor: isPlaying ? "|" : "",
           autoStart: true,
           deleteSpeed: isPlaying ? "natural" : Infinity,

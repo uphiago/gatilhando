@@ -7,8 +7,8 @@ import {
   chromecast,
   disc02,
   discord,
-  discordBlack,
-  facebook,
+  // discordBlack,
+  // facebook,
   figma,
   file02,
   framer,
@@ -32,7 +32,7 @@ import {
   slack,
   sliders04,
   telegram,
-  twitter,
+  // twitter,
   yourlogo,
 } from "../assets";
 import { links } from "../config";
@@ -40,7 +40,7 @@ import { links } from "../config";
 export const navigation = [
   {
     id: "0",
-    title: "Features",
+    title: "O que fazemos?",
     url: "#features",
   },
   {
@@ -74,9 +74,9 @@ export const notificationImages = [notification4, notification3, notification2];
 export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
 export const brainwaveServices = [
-  "Photo generating",
-  "Photo enhance",
-  "Seamless Integration",
+  "Triggers Inteligentes",
+  "Painéis 24/7",
+  "Escala Imediata",
 ];
 
 export const brainwaveServicesIcons = [
@@ -124,21 +124,23 @@ export const roadmap = [
 ];
 
 export const collabText =
-  "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.";
+  "Otimize atividades, padronize processos e atenda normas automaticamente.";
 
 export const collabContent = [
   {
     id: "0",
-    title: "Seamless Integration",
-    text: collabText,
+    title: "Integração de Sistemas",
+    text: "Seus dados conectados em todas as plataformas",
   },
   {
     id: "1",
-    title: "Smart Automation",
+    title: "Workflows Consistentes",
+    text: "Processos iguais, resultados previsíveis",
   },
   {
     id: "2",
-    title: "Top-notch Security",
+    title: "Compliance Automático",
+    text: "Normas atendidas em TODOS os processos",
   },
 ];
 
@@ -243,16 +245,16 @@ export const pricing = [
 export const benefits = [
   {
     id: "0",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Produtividade sem Esforço",
+    text: "Ganhe tempo com respostas instantâneas e rotinas otimizadas por IA.",
     backgroundUrl: "/src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "1",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "Otimize sua Rotina",
+    text: "Transforme processos repetitivos em fluxos automáticos e inteligentes. Escalabilidade garantida.",
     backgroundUrl: "/src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -260,16 +262,16 @@ export const benefits = [
   },
   {
     id: "2",
-    title: "Connect everywhere",
-    text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+    title: "Conecte Tudo",
+    text: "Integração total para operações contínuas e seguras dentro de um ecossistema eficiente.",
     backgroundUrl: "/src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
   },
   {
     id: "3",
-    title: "Fast responding",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Automação Inteligente",
+    text: "Processos ágeis e exatos, aprendendo com seus dados.",
     backgroundUrl: "/src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
@@ -277,16 +279,16 @@ export const benefits = [
   },
   {
     id: "4",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Tudo sob Controle",
+    text: "Painéis em tempo real que monitoram cada fluxo com segurança.",
     backgroundUrl: "/src/assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "5",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "Processos sem Fricção",
+    text: "Agilidade contínua, zero repetição, comando remoto imediato.",
     backgroundUrl: "/src/assets/benefits/card-6.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -294,34 +296,34 @@ export const benefits = [
 ];
 
 export const socials = [
-  {
-    id: "0",
-    title: "Discord",
-    iconUrl: discordBlack,
-    url: "#",
-  },
-  {
-    id: "1",
-    title: "Twitter",
-    iconUrl: twitter,
-    url: "#",
-  },
+  // {
+  //   id: "0",
+  //   title: "Discord",
+  //   iconUrl: discordBlack,
+  //   url: "#",
+  // },
+  // {
+  //   id: "1",
+  //   title: "Twitter",
+  //   iconUrl: twitter,
+  //   url: "#",
+  // },
   {
     id: "2",
     title: "Instagram",
     iconUrl: instagram,
-    url: "#",
+    url: "https://www.instagram.com/flowgatilhando",
   },
-  {
-    id: "3",
-    title: "Telegram",
-    iconUrl: telegram,
-    url: "#",
-  },
-  {
-    id: "4",
-    title: "Facebook",
-    iconUrl: facebook,
-    url: "#",
-  },
+  // {
+  //   id: "3",
+  //   title: "Telegram",
+  //   iconUrl: telegram,
+  //   url: "#",
+  // },
+  // {
+  //   id: "4",
+  //   title: "Facebook",
+  //   iconUrl: facebook,
+  //   url: "#",
+  // },
 ];
