@@ -25,15 +25,15 @@ const Hero = () => {
       <div ref={parallaxRef} className="container relative">
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
           <h1 className="h1 mb-6">
-            Pronto para Impactar?
+            Transforme Seu Mundo
             <br />
             <Typewriter
               options={{
                 strings: [
                   "Fluxos Inteligentes",
                   "Rotinas Otimizadas",
-                  "Suporte Automático",
-                  "Gestão Integrada",
+                  "Inteligência Artificial",
+                  "Gestão Simplificada",
                   "Performance Máxima",
                 ],
                 autoStart: true,
@@ -55,7 +55,7 @@ const Hero = () => {
                 alt="Curve"
               />
             </span>
-            , nós automatizamos enquanto você foca no que importa.
+            , nós automatizamos enquanto você foca no que importa!
           </p>
 
           <Button href="#features" white>
@@ -92,7 +92,7 @@ const Hero = () => {
                 <ScrollParallax isAbsolutelyPositioned>
                   <Notification
                     className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
-                    title="Code generation"
+                    title="Equipe"
                   />
                 </ScrollParallax>
               </div>

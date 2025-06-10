@@ -3,7 +3,12 @@ import {
   benefitIcon2,
   benefitIcon3,
   benefitIcon4,
+  benefitImage1,
   benefitImage2,
+  benefitImage3,
+  benefitImage4,
+  benefitImage5,
+  benefitImage6,
   chromecast,
   disc02,
   discord,
@@ -249,7 +254,7 @@ export const benefits = [
     text: "Ganhe tempo com respostas instantâneas e rotinas otimizadas por IA.",
     backgroundUrl: "/src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage1,
   },
   {
     id: "1",
@@ -262,11 +267,11 @@ export const benefits = [
   },
   {
     id: "2",
-    title: "Conecte Tudo",
+    title: "Conecte Sistemas",
     text: "Integração total para operações contínuas e seguras dentro de um ecossistema eficiente.",
     backgroundUrl: "/src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage3,
   },
   {
     id: "3",
@@ -274,7 +279,7 @@ export const benefits = [
     text: "Processos ágeis e exatos, aprendendo com seus dados.",
     backgroundUrl: "/src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage4,
     light: true,
   },
   {
@@ -283,7 +288,7 @@ export const benefits = [
     text: "Painéis em tempo real que monitoram cada fluxo com segurança.",
     backgroundUrl: "/src/assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage5,
   },
   {
     id: "5",
@@ -291,7 +296,7 @@ export const benefits = [
     text: "Agilidade contínua, zero repetição, comando remoto imediato.",
     backgroundUrl: "/src/assets/benefits/card-6.svg",
     iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage6,
   },
 ];
 
