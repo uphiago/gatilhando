@@ -45,24 +45,24 @@ import { links } from "../config";
 export const navigation = [
   {
     id: "0",
-    title: "O que fazemos?",
+    title: "Nossa proposta",
     url: "#features",
   },
   {
     id: "1",
-    title: "Pricing",
-    url: "#pricing",
-  },
-  {
-    id: "2",
-    title: "How to use",
+    title: "Negocios",
     url: "#how-to-use",
   },
-  {
-    id: "3",
-    title: "Roadmap",
-    url: "#roadmap",
-  },
+  // {
+  //   id: "2",
+  //   title: "How to use",
+  //   url: "#how-to-use",
+  // },
+  // {
+  //   id: "3",
+  //   title: "Roadmap",
+  //   url: "#roadmap",
+  // },
   {
     id: "4",
     title: "Source Code",
@@ -129,7 +129,7 @@ export const roadmap = [
 ];
 
 export const collabText =
-  "Otimize atividades, padronize processos e atenda normas automaticamente.";
+  "Atue com eficiência: otimize, padronize e esteja sempre em conformidade.";
 
 export const collabContent = [
   {
@@ -145,7 +145,7 @@ export const collabContent = [
   {
     id: "2",
     title: "Compliance Automático",
-    text: "Normas atendidas em TODOS os processos",
+    text: "Normas atendidas em todos os processos",
   },
 ];
 
@@ -276,7 +276,7 @@ export const benefits = [
   {
     id: "3",
     title: "Automação Inteligente",
-    text: "Processos ágeis e exatos, aprendendo com seus dados.",
+    text: "Processos ágeis e exatos, aprendendo continuamente com seus dados para entregar eficiência e inovação.",
     backgroundUrl: "/src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage4,

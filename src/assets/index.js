@@ -23,7 +23,7 @@ import loading from "./loading.png";
 import background from "./background.jpg";
 
 import curve from "./hero/curve.png";
-import robot from "./hero/robot.jpg";
+import robot from "./hero/robot.mp4";
 import performance from "./hero/performance.mp4";
 import heroBackground from "./hero/hero-background.jpg";
 

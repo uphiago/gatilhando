@@ -77,7 +77,7 @@ const Header = () => {
         </nav>
 
         <Button className="hidden lg:flex" href={links.sourceCode} external>
-          Source Code
+          Fale Conosco
         </Button>
 
         <Button
