@@ -38,12 +38,11 @@ import gradient from "./gradient.png";
 import grid from "./grid.png";
 import curve from "./hero/curve.png";
 import heroBackground from "./hero/hero-background.jpg";
-import performance from "./hero/performance.mp4";
+// import performance from "./hero/performance.mp4";
 import robot from "./hero/robot.mp4";
 import homeSmile from "./home-smile.svg";
 import loading1 from "./loading-01.svg";
 import loading from "./loading.png";
-import notification1 from "./notification/image-1.png";
 import notification2 from "./notification/image-2.png";
 import notification3 from "./notification/image-3.png";
 import notification4 from "./notification/image-4.png";
@@ -124,7 +123,7 @@ export {
   roadmap3,
   roadmap4,
   undone,
-  notification1,
+
   notification2,
   notification3,
   notification4,

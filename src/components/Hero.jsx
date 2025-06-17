@@ -10,6 +10,7 @@ import Generating from "./Generating";
 import Notification from "./Notification";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -84,11 +85,16 @@ const Hero = () => {
                 <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
 
                 <ScrollParallax isAbsolutelyPositioned>
-                  <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
+                  <ul className="z-30  absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl ">
                     {heroIcons.map((icon, index) => (
-                      <li className="p-5" key={index}>
-                        <img src={icon} width={24} height={25} alt={icon} />
-                      </li>
+                     <motion.li
+                      whileHover={{ scale: 1.2, rotate: 5 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                      className="p-5"
+                      key={index}
+                    >
+                      <img src={icon} width={24} height={25} alt={icon} />
+                    </motion.li>
                     ))}
                   </ul>
                 </ScrollParallax>
