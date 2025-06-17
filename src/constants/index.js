@@ -11,8 +11,7 @@ import {
   benefitImage6,
   chromecast,
   disc02,
-  discord,
-  // discordBlack,
+  discord, // discordBlack,
   // facebook,
   figma,
   file02,
@@ -36,8 +35,7 @@ import {
   searchMd,
   slack,
   sliders04,
-  telegram,
-  // twitter,
+  telegram, // twitter,
   yourlogo,
 } from "../assets";
 import { links } from "../config";
@@ -78,19 +76,9 @@ export const notificationImages = [notification4, notification3, notification2];
 
 export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
-export const brainwaveServices = [
-  "Triggers Inteligentes",
-  "Painéis 24/7",
-  "Escala Imediata",
-];
+export const brainwaveServices = ["Triggers Inteligentes", "Painéis 24/7", "Escala Imediata"];
 
-export const brainwaveServicesIcons = [
-  recording03,
-  recording01,
-  disc02,
-  chromecast,
-  sliders04,
-];
+export const brainwaveServicesIcons = [recording03, recording01, disc02, chromecast, sliders04];
 
 export const roadmap = [
   {
@@ -128,8 +116,7 @@ export const roadmap = [
   },
 ];
 
-export const collabText =
-  "Atue com eficiência: otimize, padronize e esteja sempre em conformidade.";
+export const collabText = "Atue com eficiência: otimize, padronize e esteja sempre em conformidade.";
 
 export const collabContent = [
   {

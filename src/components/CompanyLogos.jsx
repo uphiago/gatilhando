@@ -8,10 +8,7 @@ const CompanyLogos = ({ className }) => {
       </h5>
       <ul className="flex">
         {companyLogos.map((logo, i) => (
-          <li
-            key={i}
-            className="flex items-center justify-center flex-1 h-[8.5rem]"
-          >
+          <li key={i} className="flex items-center justify-center flex-1 h-[8.5rem]">
             <img src={logo} width={134} height={28} alt={`Logo-${i}`} />
           </li>
         ))}

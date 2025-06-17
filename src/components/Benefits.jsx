@@ -1,10 +1,10 @@
+import { curve } from "../assets";
 import Arrow from "../assets/svg/Arrow";
 import ClipPath from "../assets/svg/ClipPath";
 import { benefits } from "../constants";
-import { GradientLight } from "./design/Benefits";
 import Heading from "./Heading";
 import Section from "./Section";
-import { curve } from "../assets";
+import { GradientLight } from "./design/Benefits";
 
 const Benefits = () => {
   return (
@@ -42,12 +42,7 @@ const Benefits = () => {
                 <h5 className="h5 mb-5">{benefit.title}</h5>
                 <p className="body-3 mb-6 text-n-3">{benefit.text}</p>
                 <div className="flex items-center mt-auto">
-                  <img
-                    src={benefit.iconUrl}
-                    width={48}
-                    height={48}
-                    alt={benefit.title}
-                  />
+                  <img src={benefit.iconUrl} width={48} height={48} alt={benefit.title} />
 
                   {/* <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
                     Explore more
@@ -58,10 +53,7 @@ const Benefits = () => {
 
               {benefit.light && <GradientLight />}
 
-              <div
-                className="absolute inset-0.5 bg-n-8"
-                style={{ clipPath: "url(#benefits)" }}
-              >
+              <div className="absolute inset-0.5 bg-n-8" style={{ clipPath: "url(#benefits)" }}>
                 <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
                   {benefit.imageUrl && (
                     <img

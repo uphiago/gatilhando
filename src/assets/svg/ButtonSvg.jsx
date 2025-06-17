@@ -1,11 +1,6 @@
 const ButtonSvg = (white) => (
   <>
-    <svg
-      className="absolute top-0 left-0"
-      width="21"
-      height="44"
-      viewBox="0 0 21 44"
-    >
+    <svg className="absolute top-0 left-0" width="21" height="44" viewBox="0 0 21 44">
       <path
         fill={white ? "white" : "none"}
         stroke={white ? "white" : "url(#btn-left)"} // mentioned in ButtonGradient.jsx
@@ -21,11 +16,7 @@ const ButtonSvg = (white) => (
       fill={white ? "white" : "none"}
     >
       {white ? (
-        <polygon
-          fill="white"
-          fillRule="nonzero"
-          points="100 0 100 44 0 44 0 0"
-        />
+        <polygon fill="white" fillRule="nonzero" points="100 0 100 44 0 44 0 0" />
       ) : (
         <>
           <polygon
@@ -41,12 +32,7 @@ const ButtonSvg = (white) => (
         </>
       )}
     </svg>
-    <svg
-      className="absolute top-0 right-0"
-      width="21"
-      height="44"
-      viewBox="0 0 21 44"
-    >
+    <svg className="absolute top-0 right-0" width="21" height="44" viewBox="0 0 21 44">
       <path
         fill={white ? "white" : "none"}
         stroke={white ? "white" : "url(#btn-right)"} // mentioned in ButtonGradient.jsx

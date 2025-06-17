@@ -1,16 +1,12 @@
 import { useState } from "react";
-import { service1, service2, service3, check } from "../assets";
+
+import { check, service1, service2, service3 } from "../assets";
+import { curve } from "../assets";
 import { brainwaveServices, brainwaveServicesIcons } from "../constants";
 import Generating from "./Generating";
 import Heading from "./Heading";
 import Section from "./Section";
-import { curve } from "../assets";
-import {
-  Gradient,
-  PhotoChatMessage,
-  VideoBar,
-  VideoChatMessage,
-} from "./design/Services";
+import { Gradient, PhotoChatMessage, VideoBar, VideoChatMessage } from "./design/Services";
 
 const Services = () => {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -57,17 +53,8 @@ const Services = () => {
               </p>
               <ul className="body-2">
                 {brainwaveServices.map((item, i) => (
-                  <li
-                    key={i}
-                    className="flex items-start py-4 border-t border-n-6"
-                  >
-                    <img
-                      width={24}
-                      height={24}
-                      src={check}
-                      alt="check"
-                      className="pointer-events-none select-none"
-                    />
+                  <li key={i} className="flex items-start py-4 border-t border-n-6">
+                    <img width={24} height={24} src={check} alt="check" className="pointer-events-none select-none" />
                     <p className="ml-4">{item}</p>
                   </li>
                 ))}
@@ -104,8 +91,7 @@ const Services = () => {
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="h4 mb-4">Sistemas Integrados</h4>
                 <p className="body-2 mb-[2rem] text-n-3">
-                  O motor de integração de processos e sistemas mais
-                  eficiente do mercado. O que você vai criar?
+                  O motor de integração de processos e sistemas mais eficiente do mercado. O que você vai criar?
                 </p>
 
                 <ul className="flex items-center justify-between">
@@ -120,17 +106,10 @@ const Services = () => {
                     >
                       <div
                         className={
-                          i === 2
-                            ? "flex items-center justify-center w-full h-full bg-n-7 rounded-[1rem]"
-                            : ""
+                          i === 2 ? "flex items-center justify-center w-full h-full bg-n-7 rounded-[1rem]" : ""
                         }
                       >
-                        <img
-                          src={icon}
-                          width={24}
-                          height={24}
-                          alt={`icon-${i}`}
-                        />
+                        <img src={icon} width={24} height={24} alt={`icon-${i}`} />
                       </div>
                     </li>
                   ))}

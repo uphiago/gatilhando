@@ -38,9 +38,7 @@ const Roadmap = () => (
 
                     <div className="flex items-center px-4 py-1 bg-n-1 rounded text-n-8">
                       <img
-                        className={`mr-2.5 ${
-                          item.status !== "done" && "animate-spin"
-                        } pointer-events-none select-none`}
+                        className={`mr-2.5 ${item.status !== "done" && "animate-spin"} pointer-events-none select-none`}
                         src={item.status === "done" ? check2 : loading1}
                         width={16}
                         height={16}
@@ -52,9 +50,7 @@ const Roadmap = () => (
 
                   <div className="mb-10 -my-10 -mx-15">
                     <img
-                      className={`w-full ${
-                        item.status !== "done" && "animate-pulse"
-                      } pointer-events-none select-none`}
+                      className={`w-full ${item.status !== "done" && "animate-pulse"} pointer-events-none select-none`}
                       src={item.imageUrl}
                       width={628}
                       height={426}

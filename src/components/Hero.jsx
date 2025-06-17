@@ -6,10 +6,10 @@ import { curve, heroBackground, robot } from "../assets";
 import { heroIcons } from "../constants";
 import Button from "./Button";
 import CompanyLogos from "./CompanyLogos";
-import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import Section from "./Section";
+import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -43,10 +43,9 @@ const Hero = () => {
           </h1>
 
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            Deixe as rotinas repetitivas por nossa conta. Na
-            {" "}
+            Deixe as rotinas repetitivas por nossa conta. Na{" "}
             <span className="inline-block relative font-semibold">
-              Gatilhando 
+              Gatilhando
               <img
                 src={curve}
                 className="absolute top-full left-0 w-full xl:-mt-2 pointer-events-none select-none"

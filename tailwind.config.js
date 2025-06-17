@@ -3,11 +3,7 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./public/assets/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "./public/assets/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -72,8 +68,7 @@ export default {
       },
       backgroundImage: {
         "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
-        "conic-gradient":
-          "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
+        "conic-gradient": "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
         "benefit-card-1": "url(assets/benefits/card-1.svg)",
         "benefit-card-2": "url(assets/benefits/card-2.svg)",
         "benefit-card-3": "url(assets/benefits/card-3.svg)",
@@ -88,8 +83,7 @@ export default {
       addBase({});
       addComponents({
         ".container": {
-          "@apply max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem]":
-            {},
+          "@apply max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem]": {},
         },
         ".h1": {
           "@apply font-semibold text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem]":
@@ -122,8 +116,7 @@ export default {
           "@apply text-sm": {},
         },
         ".tagline": {
-          "@apply font-grotesk font-light text-xs tracking-tagline uppercase":
-            {},
+          "@apply font-grotesk font-light text-xs tracking-tagline uppercase": {},
         },
         ".quote": {
           "@apply font-code text-lg leading-normal": {},

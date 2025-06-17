@@ -1,14 +1,8 @@
+import { useEffect, useRef, useState } from "react";
 import Typewriter from "typewriter-effect";
 
-import {
-  brainwaveWhiteSymbol,
-  gradient,
-  loading,
-  pause,
-  play,
-} from "../../assets";
+import { brainwaveWhiteSymbol, gradient, loading, pause, play } from "../../assets";
 import ChatBubbleWing from "../../assets/svg/ChatBubbleWing";
-import { useEffect, useRef, useState } from "react";
 
 export const Gradient = () => {
   return (
@@ -58,28 +52,16 @@ export const VideoChatMessage = ({ isPlaying }) => {
         }}
       />
       <div className="absolute left-5 -bottom-[1.125rem] flex items-center justify-center w-[2.25rem] h-[2.25rem] bg-color-1 rounded-[0.75rem]">
-        <img
-          src={brainwaveWhiteSymbol}
-          width={26}
-          height={26}
-          alt="Brainwave"
-        />
+        <img src={brainwaveWhiteSymbol} width={26} height={26} alt="Brainwave" />
       </div>
       <div className="tagline absolute right-2.5 bottom-1 text-[0.625rem] text-n-3 uppercase">
         {isPlaying ? (
-          <img
-            src={loading}
-            alt="Loading"
-            className="w-4 h-4 animate-spin pointer-events-none select-none"
-          />
+          <img src={loading} alt="Loading" className="w-4 h-4 animate-spin pointer-events-none select-none" />
         ) : (
           <span>just now</span>
         )}
       </div>
-      <ChatBubbleWing
-        className="absolute right-full bottom-0 -scale-x-100"
-        pathClassName="fill-n-6"
-      />
+      <ChatBubbleWing className="absolute right-full bottom-0 -scale-x-100" pathClassName="fill-n-6" />
     </div>
   );
 };
