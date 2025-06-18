@@ -2,6 +2,7 @@
 import { notificationImages } from "../constants";
 import Lottie from "lottie-react";
 import notificationAnim from "../assets/notification/image-1.json";
+import { motion } from "framer-motion";
 
 const Notification = ({ className, title }) => {
   return (
@@ -22,12 +23,16 @@ const Notification = ({ className, title }) => {
         <div className="flex items-center justify-between">
           <ul className="flex -m-0.5">
             {notificationImages.map((item, i) => (
-              <li key={i} className="flex w-6 h-6 border-2 border-n-12 rounded-full overflow-hidden">
+              <motion.li
+                key={i}
+                whileHover={{ scale: 1.2 }}
+                transition={{ type: "spring", stiffness: 500, damping: 20 }}
+                className="flex w-6 h-6 border-2 border-n-12 rounded-full overflow-hidden"
+              >
                 <img src={item} alt={`image-${i}`} className="w-full" width={20} height={20} />
-              </li>
+              </motion.li>
             ))}
           </ul>
-
           <div className="body-2 text-n-13">1m ago</div>
         </div>
       </div>

@@ -88,8 +88,8 @@ const Hero = () => {
                   <ul className="z-30  absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl ">
                     {heroIcons.map((icon, index) => (
                      <motion.li
-                      whileHover={{ scale: 1.2, rotate: 5 }}
-                      transition={{ type: "spring", stiffness: 300 }}
+                      whileHover={{ scale: 1.2 }}
+                      transition={{ type: "spring", stiffness: 500, damping: 20 }}
                       className="p-5"
                       key={index}
                     >

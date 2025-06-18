@@ -72,6 +72,7 @@ import instagram from "./socials/instagram.svg";
 import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
 import yourlogo from "./yourlogo.svg";
+import yourlogo1 from "./tools/yourlogo-1.json";
 
 export {
   brainwave,
@@ -86,6 +87,7 @@ export {
   smallSphere,
   grid,
   yourlogo,
+  yourlogo1,
   homeSmile,
   file02,
   searchMd,
