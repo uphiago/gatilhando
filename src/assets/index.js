@@ -1,3 +1,9 @@
+import benefitIcon1 from "../assets/benefits/icon-1.json";
+import benefitIcon2 from "../assets/benefits/icon-2.json";
+import benefitIcon3 from "../assets/benefits/icon-3.json";
+import benefitIcon4 from "../assets/benefits/icon-4.json";
+import benefitIcon5 from "../assets/benefits/icon-5.json";
+import benefitIcon6 from "../assets/benefits/icon-6.json";
 import smallSphere from "./4-small.png";
 import background from "./background.jpg";
 import benefitCard1 from "./benefits/card-1.svg";
@@ -6,10 +12,6 @@ import benefitCard3 from "./benefits/card-3.svg";
 import benefitCard4 from "./benefits/card-4.svg";
 import benefitCard5 from "./benefits/card-5.svg";
 import benefitCard6 from "./benefits/card-6.svg";
-import benefitIcon1 from "./benefits/icon-1.svg";
-import benefitIcon2 from "./benefits/icon-2.svg";
-import benefitIcon3 from "./benefits/icon-3.svg";
-import benefitIcon4 from "./benefits/icon-4.svg";
 import benefitImage1 from "./benefits/square1.png";
 import benefitImage2 from "./benefits/square2.png";
 import benefitImage3 from "./benefits/square3.png";
@@ -71,8 +73,8 @@ import facebook from "./socials/facebook.svg";
 import instagram from "./socials/instagram.svg";
 import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
-import yourlogo from "./yourlogo.svg";
 import yourlogo1 from "./tools/yourlogo-1.json";
+import yourlogo from "./yourlogo.svg";
 
 export {
   brainwave,
@@ -125,7 +127,6 @@ export {
   roadmap3,
   roadmap4,
   undone,
-
   notification2,
   notification3,
   notification4,
@@ -139,6 +140,8 @@ export {
   benefitIcon2,
   benefitIcon3,
   benefitIcon4,
+  benefitIcon5,
+  benefitIcon6,
   benefitImage1,
   benefitImage2,
   benefitImage3,

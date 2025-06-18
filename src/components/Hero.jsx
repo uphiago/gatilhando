@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useRef } from "react";
 import { ScrollParallax } from "react-just-parallax";
 import Typewriter from "typewriter-effect";
@@ -5,12 +6,11 @@ import Typewriter from "typewriter-effect";
 import { curve, heroBackground, robot } from "../assets";
 import { heroIcons } from "../constants";
 import Button from "./Button";
-import CompanyLogos from "./CompanyLogos";
+// import CompanyLogos from "./CompanyLogos";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
-import { motion } from "framer-motion";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -87,14 +87,14 @@ const Hero = () => {
                 <ScrollParallax isAbsolutelyPositioned>
                   <ul className="z-30  absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl ">
                     {heroIcons.map((icon, index) => (
-                     <motion.li
-                      whileHover={{ scale: 1.2 }}
-                      transition={{ type: "spring", stiffness: 500, damping: 20 }}
-                      className="p-5"
-                      key={index}
-                    >
-                      <img src={icon} width={24} height={25} alt={icon} />
-                    </motion.li>
+                      <motion.li
+                        whileHover={{ scale: 1.2 }}
+                        transition={{ type: "spring", stiffness: 500, damping: 20 }}
+                        className="p-5"
+                        key={index}
+                      >
+                        <img src={icon} width={24} height={25} alt={icon} />
+                      </motion.li>
                     ))}
                   </ul>
                 </ScrollParallax>
@@ -124,7 +124,7 @@ const Hero = () => {
           <BackgroundCircles />
         </div>
 
-        <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
+        {/* <CompanyLogos className="hidden relative z-10 mt-20 lg:block" /> */}
       </div>
 
       <BottomLine />
