@@ -50,9 +50,11 @@ const Benefits = () => {
 
                   <motion.div
                     className="pointer-events-auto mt-auto w-12 h-12 rounded-md bg-[#885deb] flex items-center justify-center"
-                    whileHover={{ scale: 1.12, rotate: 3 }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                    drag
+                    dragElastic={0.03}
+                    dragTransition={{ bounceStiffness: 500, bounceDamping: 15 }}
+                    dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+                    whileDrag={{ cursor: "grabbing" }}
                     onMouseEnter={() => lottieRef.current?.play()}
                     onMouseLeave={() => lottieRef.current?.goToAndStop(0, true)}
                   >
