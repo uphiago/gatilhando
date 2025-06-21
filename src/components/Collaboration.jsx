@@ -6,6 +6,8 @@ import { collabApps, collabContent, collabText } from "../constants";
 import Button from "./Button";
 import Section from "./Section";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
+import TooltipIcon from "./design/Tooltips";
+import { SquigglyTextHighlight } from "./design/Underline";
 
 const Collaboration = () => {
   // const lottieRef = useRef(null);
@@ -14,19 +16,11 @@ const Collaboration = () => {
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">
-            Sua Gestão Pronta para o {}
-            <span className="inline-block relative font-semibold">
+            Sua Gestão Pronta para o{" "}
+            <SquigglyTextHighlight delay={1000} color="#7043EC">
               Futuro.
-              <img
-                src={curve}
-                className="absolute top-full left-0 w-full xl:-mt-2 pointer-events-none select-none"
-                width={624}
-                height={28}
-                alt="Curve"
-              />
-            </span>
+            </SquigglyTextHighlight>
           </h2>
-
           <ul className="max-w-[22rem] mb-10 md:mb-14">
             {collabContent.map((item) => {
               const lottieRef = useRef(null);
@@ -73,18 +67,7 @@ const Collaboration = () => {
 
             <ul>
               {collabApps.map((app, i) => (
-                <li
-                  key={app.id}
-                  className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${i * 45}`}
-                >
-                  <div
-                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
-                      i * 45
-                    } animate-pulse`}
-                  >
-                    <img src={app.icon} alt={app.title} width={app.height} height={app.height} className="m-auto" />
-                  </div>
-                </li>
+                <TooltipIcon key={app.id} app={app} rotation={i * 45} />
               ))}
             </ul>
 

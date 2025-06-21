@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { ScrollParallax } from "react-just-parallax";
 import Typewriter from "typewriter-effect";
+import { SquigglyTextHighlight } from "./design/Underline";
 
 import { curve, heroBackground, robot } from "../assets";
 import { heroIcons } from "../constants";
@@ -45,16 +46,8 @@ const Hero = () => {
 
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
             Deixe as rotinas repetitivas por nossa conta. Na{" "}
-            <span className="inline-block relative font-semibold">
-              Gatilhando
-              <img
-                src={curve}
-                className="absolute top-full left-0 w-full xl:-mt-2 pointer-events-none select-none"
-                width={624}
-                height={28}
-                alt="Curve"
-              />
-            </span>
+              <SquigglyTextHighlight delay={1000} color="#7043EC">              Gatilhando
+</SquigglyTextHighlight>
             , nós automatizamos enquanto você foca no que importa!
           </p>
 

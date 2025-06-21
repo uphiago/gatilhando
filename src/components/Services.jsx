@@ -7,6 +7,7 @@ import Generating from "./Generating";
 import Heading from "./Heading";
 import Section from "./Section";
 import { Gradient, PhotoChatMessage, VideoBar, VideoChatMessage } from "./design/Services";
+import { SquigglyTextHighlight } from "./design/Underline";
 
 const Services = () => {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -18,16 +19,9 @@ const Services = () => {
           title={
             <>
               Fluxos Rápidos,{" "}
-              <span className="inline-block relative font-semibold">
+              <SquigglyTextHighlight delay={1000} color="#7043EC">
                 Negócios Ágeis!
-                <img
-                  src={curve}
-                  className="absolute top-full left-0 w-full xl:-mt-2 pointer-events-none select-none"
-                  width={624}
-                  height={28}
-                  alt="Curve"
-                />
-              </span>
+              </SquigglyTextHighlight>
             </>
           }
           text="Unifique aplicações, padronize tarefas e cresça sem limites."

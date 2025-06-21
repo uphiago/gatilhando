@@ -28,8 +28,8 @@ import aws from "./collaboration/aws.png";
 import curve1 from "./collaboration/curve-1.svg";
 import curve2 from "./collaboration/curve-2.svg";
 import discord from "./collaboration/discord.png";
+import docker from "./collaboration/docker.png";
 import google from "./collaboration/google.png";
-import grok from "./collaboration/grok.png";
 import n8n from "./collaboration/n8n.png";
 import nvidia from "./collaboration/nvidia.png";
 import ollama from "./collaboration/ollama.png";
@@ -115,7 +115,7 @@ export {
   openai,
   google,
   slack,
-  grok,
+  docker,
   service1,
   service2,
   service3,

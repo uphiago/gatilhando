@@ -9,6 +9,7 @@ import { benefits } from "../constants";
 import Heading from "./Heading";
 import Section from "./Section";
 import { GradientLight } from "./design/Benefits";
+import { SquigglyTextHighlight } from "./design/Underline";
 
 const Benefits = () => {
   return (
@@ -19,16 +20,9 @@ const Benefits = () => {
           title={
             <>
               Agilize sua rotina com{" "}
-              <span className="inline-block relative font-semibold">
+              <SquigglyTextHighlight delay={1000} color="#7043EC">
                 Gatilhando.
-                <img
-                  src={curve}
-                  className="absolute top-full left-0 w-full xl:-mt-2 pointer-events-none select-none"
-                  width={624}
-                  height={28}
-                  alt="Curve"
-                />
-              </span>
+              </SquigglyTextHighlight>
             </>
           }
         />
