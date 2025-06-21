@@ -22,17 +22,18 @@ import brainwaveWhiteSymbol from "./brainwave-symbol-white.svg";
 import brainwaveSymbol from "./brainwave-symbol.svg";
 import brainwave from "./brainwave.svg";
 import check2 from "./check-02.svg";
-import check from "./check.svg";
+import check from "../assets/check.json";
 import chromecast from "./chrome-cast.svg";
 import curve1 from "./collaboration/curve-1.svg";
 import curve2 from "./collaboration/curve-2.svg";
 import discord from "./collaboration/discord.png";
-import figma from "./collaboration/figma.png";
-import framer from "./collaboration/framer.png";
-import notion from "./collaboration/notion.png";
-import photoshop from "./collaboration/photoshop.png";
-import protopie from "./collaboration/protopie.png";
-import raindrop from "./collaboration/raindrop.png";
+import ollama from "./collaboration/ollama.png";
+import aws from "./collaboration/aws.png";
+import n8n from "./collaboration/n8n.png";
+import nvidia from "./collaboration/nvidia.png";
+import openai from "./collaboration/openai.png";
+import google from "./collaboration/google.png";
+import grok from "./collaboration/grok.png";
 import slack from "./collaboration/slack.png";
 import disc02 from "./disc-02.svg";
 import file02 from "./file-02.svg";
@@ -107,13 +108,14 @@ export {
   curve1,
   curve2,
   discord,
-  figma,
-  framer,
-  notion,
-  photoshop,
-  protopie,
-  raindrop,
+  aws,
+  n8n,
+  ollama,
+  nvidia,
+  openai,
+  google,
   slack,
+  grok,
   service1,
   service2,
   service3,

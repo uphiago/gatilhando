@@ -1,3 +1,6 @@
+import Lottie from "lottie-react";
+import { useRef } from "react";
+
 import { brainwaveSymbol, check, curve } from "../assets";
 import { collabApps, collabContent, collabText } from "../constants";
 import Button from "./Button";
@@ -5,6 +8,7 @@ import Section from "./Section";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
 
 const Collaboration = () => {
+  // const lottieRef = useRef(null);
   return (
     <Section crosses>
       <div className="container lg:flex">
@@ -24,16 +28,32 @@ const Collaboration = () => {
           </h2>
 
           <ul className="max-w-[22rem] mb-10 md:mb-14">
-            {collabContent.map((item) => (
-              <li className="mb-3 py-3" key={item.id}>
-                <div className="flex items-center">
-                  <img src={check} width={24} alt="check" height={24} className="pointer-events-none select-none" />
-                  <h6 className="body-2 ml-5">{item.title}</h6>
-                </div>
+            {collabContent.map((item) => {
+              const lottieRef = useRef(null);
+              return (
+                <li className="mb-3 py-3" key={item.id}>
+                  <div className="flex items-center">
+                    <Lottie
+                      lottieRef={lottieRef}
+                      animationData={check}
+                      autoplay={false}
+                      loop={false}
+                      className=""
+                      speed={2}
+                      style={{ width: 32, height: 32 }}
+                      onMouseEnter={() => {
+                        lottieRef.current?.stop();
+                        lottieRef.current?.play();
+                      }}
+                    />
 
-                {item.text && <p className="body-2 mt-3 text-n-4">{item.text}</p>}
-              </li>
-            ))}
+                    <h6 className="body-2 ml-5">{item.title}</h6>
+                  </div>
+
+                  {item.text && <p className="body-2 mt-3 text-n-4">{item.text}</p>}
+                </li>
+              );
+            })}
           </ul>
 
           <Button>Converse Conosco</Button>

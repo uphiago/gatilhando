@@ -49,9 +49,9 @@ const Benefits = () => {
                   <p className="body-3 mb-6 text-n-3">{benefit.text}</p>
 
                   <motion.div
-                    className="pointer-events-auto mt-auto w-12 h-12 rounded-md bg-[#885deb] flex items-center justify-center"
+                    className="pointer-events-auto mt-auto w-12 h-12 rounded-md bg-[#ffffff] flex items-center justify-center"
                     drag
-                    dragElastic={0.03}
+                    dragElastic={0.015}
                     dragTransition={{ bounceStiffness: 500, bounceDamping: 15 }}
                     dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
                     whileDrag={{ cursor: "grabbing" }}
