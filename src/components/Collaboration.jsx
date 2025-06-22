@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { useRef } from "react";
 
@@ -34,7 +35,7 @@ const Collaboration = () => {
                       loop={false}
                       className=""
                       speed={2}
-                      style={{ width: 32, height: 32 }}
+                      style={{ width: 28, height: 28 }}
                       onMouseEnter={() => {
                         lottieRef.current?.stop();
                         lottieRef.current?.play();
@@ -58,11 +59,40 @@ const Collaboration = () => {
 
           <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale-75 md:scale-100">
             <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
-              <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
+              <motion.div
+                className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-gradient-to-r from-white to-gray-300 rounded-full"
+                animate={{
+                  scale: [1, 1.03, 1],
+                  filter: [
+                    "drop-shadow(0 0 8px rgba(255,255,255,0.4))",
+                    "drop-shadow(0 0 14px rgba(255,255,255,0.6))",
+                    "drop-shadow(0 0 8px rgba(255,255,255,0.4))",
+                  ],
+                }}
+                transition={{
+                  duration: 3.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
                 <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
-                  <img src={dotmindlabsSymbol} width={48} height={48} alt="dotmindlab" />
+                  <motion.img
+                    src={dotmindlabsSymbol}
+                    width={48}
+                    height={48}
+                    alt="dotmindlab"
+                    animate={{
+                      scale: [1, 1, 1],
+                      opacity: [1, 1, 1],
+                    }}
+                    transition={{
+                      duration: 3.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  />
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             <ul>
