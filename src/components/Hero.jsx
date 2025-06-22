@@ -46,7 +46,7 @@ const Hero = () => {
 
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
             Deixe as rotinas repetitivas por nossa conta. Na{" "}
-            <SquigglyTextHighlight delay={1000} color="#7043EC">
+            <SquigglyTextHighlight delay={1000} color="#ffffff">
               {" "}
               Gatilhando
             </SquigglyTextHighlight>

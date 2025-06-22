@@ -1,7 +1,7 @@
 import Lottie from "lottie-react";
 import { useRef } from "react";
 
-import { dotmindlabsSymbol, check, curve } from "../assets";
+import { check, curve, dotmindlabsSymbol } from "../assets";
 import { collabApps, collabContent, collabText } from "../constants";
 import Button from "./Button";
 import Section from "./Section";
@@ -17,7 +17,7 @@ const Collaboration = () => {
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">
             Sua Gestão Pronta para o{" "}
-            <SquigglyTextHighlight delay={1000} color="#7043EC">
+            <SquigglyTextHighlight delay={1000} color="#ffffff">
               Futuro.
             </SquigglyTextHighlight>
           </h2>

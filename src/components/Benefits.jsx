@@ -20,7 +20,7 @@ const Benefits = () => {
           title={
             <>
               Agilize sua rotina com{" "}
-              <SquigglyTextHighlight delay={1000} color="#7043EC">
+              <SquigglyTextHighlight delay={1000} color="#ffffff">
                 Gatilhando.
               </SquigglyTextHighlight>
             </>

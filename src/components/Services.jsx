@@ -19,7 +19,7 @@ const Services = () => {
           title={
             <>
               Fluxos Rápidos,{" "}
-              <SquigglyTextHighlight delay={1000} color="#7043EC">
+              <SquigglyTextHighlight delay={1000} color="#ffffff">
                 Negócios Ágeis!
               </SquigglyTextHighlight>
             </>
