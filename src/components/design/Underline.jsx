@@ -29,14 +29,14 @@ export const SquigglyTextHighlight = ({ children, delay = 0, color = "#ffffff" }
             </defs>
             <motion.path
               key={animationKey}
-              d="M8 4C26 7 42 6 60 4C78 2 94 6 112 4"
+              d="M8 4 C30 3.5 90 3.5 112 4"
               stroke={`url(#waveGrad-${animationKey})`}
               strokeWidth="3"
               strokeLinecap="round"
               initial={{ pathLength: 0, y: 0 }}
               animate={{ pathLength: 1, y: 0 }}
               transition={{
-                pathLength: { duration: 1.5, ease: "easeOut" },
+                pathLength: { duration: 0.5, ease: "easeOut" },
                 y: { duration: 0.8, ease: "easeOut" },
               }}
             />

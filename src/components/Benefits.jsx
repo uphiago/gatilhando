@@ -9,7 +9,7 @@ import { SquigglyTextHighlight } from "./design/Underline";
 
 // Evervault Card Pattern Component
 const CardPattern = ({ mouseX, mouseY, randomString }) => {
-  let maskImage = useMotionTemplate`radial-gradient(80px at ${mouseX}px ${mouseY}px, white, transparent)`;
+  let maskImage = useMotionTemplate`radial-gradient(60px at ${mouseX}px ${mouseY}px, white, transparent)`;
   let style = { maskImage, WebkitMaskImage: maskImage };
   
   return (
@@ -20,7 +20,7 @@ const CardPattern = ({ mouseX, mouseY, randomString }) => {
         style={style}
       />
       <motion.div
-        className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay group-hover:opacity-100"
+        className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay group-hover:opacity-30"
         style={style}
       >
         <p className="absolute inset-x-0 p-0 text-xs h-full break-words whitespace-pre-wrap text-white font-mono font-bold transition duration-500">
