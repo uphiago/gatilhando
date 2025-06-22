@@ -49,8 +49,7 @@ const Benefits = () => {
                     dragTransition={{ bounceStiffness: 500, bounceDamping: 15 }}
                     dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
                     whileDrag={{ cursor: "grabbing" }}
-                    onMouseEnter={() => lottieRef.current?.play()}
-                    onMouseLeave={() => lottieRef.current?.goToAndStop(0, true)}
+                    onMouseEnter={() => lottieRef.current?.goToAndPlay(0, true)}
                   >
                     <Lottie
                       animationData={benefit.iconUrl}
