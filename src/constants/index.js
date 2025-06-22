@@ -241,7 +241,7 @@ export const pricing = [
 export const benefits = [
   {
     id: "0",
-    title: " Esforço",
+    title: "Performance Acelerada",
     text: "Ganhe tempo com respostas instantâneas e rotinas otimizadas por IA.",
     backgroundUrl: "/src/assets/benefits/card-1.svg",
     iconWrapperClass: "scale-[1.1]",
