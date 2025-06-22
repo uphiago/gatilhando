@@ -46,9 +46,9 @@ import robot from "./hero/robot.mp4";
 import homeSmile from "./home-smile.svg";
 import loading1 from "./loading-01.svg";
 import loading from "./loading.png";
-import notification2 from "./notification/image-2.png";
-import notification3 from "./notification/image-3.png";
-import notification4 from "./notification/image-4.png";
+import notification1 from "./notification/image-1.svg";
+import notification2 from "./notification/image-2.svg";
+import notification3 from "./notification/image-3.svg";
 import pause from "./pause.svg";
 import play from "./play.svg";
 import plusSquare from "./plus-square.svg";
@@ -129,9 +129,9 @@ export {
   roadmap3,
   roadmap4,
   undone,
+  notification1,
   notification2,
   notification3,
-  notification4,
   benefitCard1,
   benefitCard2,
   benefitCard3,
