@@ -11,8 +11,7 @@ import TooltipIcon from "./design/Tooltips";
 import { SquigglyTextHighlight } from "./design/Underline";
 
 const Collaboration = () => {
-  const lottieRef = useRef(null);
-
+  const lottieRefs = useRef([]);
   return (
     <Section crosses>
       <div className="container lg:flex">
@@ -24,12 +23,16 @@ const Collaboration = () => {
             </SquigglyTextHighlight>
           </h2>
           <ul className="max-w-[22rem] mb-10 md:mb-14">
-            {collabContent.map((item) => {
+            {collabContent.map((item, index) => {
+              if (!lottieRefs.current[index]) {
+                lottieRefs.current[index] = { current: null };
+              }
+
               return (
                 <li className="mb-3 py-3" key={item.id}>
                   <div className="flex items-center">
                     <Lottie
-                      lottieRef={lottieRef}
+                      lottieRef={lottieRefs.current[index]}
                       animationData={check}
                       autoplay={false}
                       loop={false}
@@ -37,14 +40,12 @@ const Collaboration = () => {
                       speed={2}
                       style={{ width: 28, height: 28 }}
                       onMouseEnter={() => {
-                        lottieRef.current?.stop();
-                        lottieRef.current?.play();
+                        lottieRefs.current[index].current?.stop();
+                        lottieRefs.current[index].current?.play();
                       }}
                     />
-
                     <h6 className="body-2 ml-5">{item.title}</h6>
                   </div>
-
                   {item.text && <p className="body-2 mt-3 text-n-4">{item.text}</p>}
                 </li>
               );
