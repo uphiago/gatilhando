@@ -34,7 +34,6 @@ import n8n from "./collaboration/n8n.png";
 import nvidia from "./collaboration/nvidia.png";
 import ollama from "./collaboration/ollama.png";
 import openai from "./collaboration/openai.png";
-import slack from "./collaboration/slack.png";
 import disc02 from "./disc-02.svg";
 import file02 from "./file-02.svg";
 import gradient from "./gradient.png";
@@ -114,7 +113,6 @@ export {
   nvidia,
   openai,
   google,
-  slack,
   docker,
   service1,
   service2,

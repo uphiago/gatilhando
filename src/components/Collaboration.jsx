@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { useRef } from "react";
 
-import { check, curve, dotmindlabsSymbol } from "../assets";
+import { check, dotmindlabsSymbol } from "../assets";
 import { collabApps, collabContent, collabText } from "../constants";
 import Button from "./Button";
 import Section from "./Section";
@@ -11,7 +11,8 @@ import TooltipIcon from "./design/Tooltips";
 import { SquigglyTextHighlight } from "./design/Underline";
 
 const Collaboration = () => {
-  // const lottieRef = useRef(null);
+  const lottieRef = useRef(null);
+
   return (
     <Section crosses>
       <div className="container lg:flex">
@@ -24,7 +25,6 @@ const Collaboration = () => {
           </h2>
           <ul className="max-w-[22rem] mb-10 md:mb-14">
             {collabContent.map((item) => {
-              const lottieRef = useRef(null);
               return (
                 <li className="mb-3 py-3" key={item.id}>
                   <div className="flex items-center">

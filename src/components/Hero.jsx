@@ -3,10 +3,9 @@ import { useRef } from "react";
 import { ScrollParallax } from "react-just-parallax";
 import Typewriter from "typewriter-effect";
 
-import { curve, heroBackground, robot } from "../assets";
+import { heroBackground, robot } from "../assets";
 import { heroIcons } from "../constants";
 import Button from "./Button";
-// import CompanyLogos from "./CompanyLogos";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import Section from "./Section";

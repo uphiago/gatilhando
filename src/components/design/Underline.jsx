@@ -18,7 +18,7 @@ export const SquigglyTextHighlight = ({ children, delay = 0, color = "#ffffff" }
     <span className="inline-block relative font-bold text-white cursor-pointer" onMouseEnter={handleHover}>
       {children}
       {isVisible && (
-        <motion.div className="absolute -bottom-[2px] left-0 right-0 h-[8px] overflow-visible">
+        <motion.span className="absolute -bottom-[2px] left-0 right-0 h-[8px] overflow-visible block">
           <svg width="100%" height="10" viewBox="6 0 110 8" fill="none" preserveAspectRatio="none">
             <defs>
               <linearGradient id={`waveGrad-${animationKey}`} x1="0%" y1="0%" x2="100%" y2="0%">
@@ -41,7 +41,7 @@ export const SquigglyTextHighlight = ({ children, delay = 0, color = "#ffffff" }
               }}
             />
           </svg>
-        </motion.div>
+        </motion.span>
       )}
     </span>
   );

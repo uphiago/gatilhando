@@ -36,9 +36,7 @@ import {
   roadmap3,
   roadmap4,
   searchMd,
-  slack,
   sliders04,
-  telegram, // twitter,
   yourlogo,
   yourlogo1,
 } from "../assets";

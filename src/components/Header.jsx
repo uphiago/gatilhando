@@ -52,7 +52,7 @@ const Header = () => {
                 key={item.id}
                 href={item.url}
                 target={item.external ? "_blank" : "_self"}
-                rel={item.external && "noreferrer noopener"}
+                rel={item.external ? "noreferrer noopener" : undefined}
                 onClick={handleClick}
                 className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
                   item.onlyMobile && "lg:hidden"
