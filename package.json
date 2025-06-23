@@ -1,14 +1,14 @@
 {
-  "name": "Dotmindlabs",
+  "name": "dotmindlabs",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "preview": "vite preview"
+    "preview": "vite preview --host"
   },
   "dependencies": {
     "framer-motion": "^12.18.1",
@@ -19,6 +19,7 @@
     "react-just-parallax": "^3.1.16",
     "react-router-dom": "^7.6.1",
     "scroll-lock": "^2.1.5",
+    "typeit": "^8.8.7",
     "typewriter-effect": "^2.22.0"
   },
   "devDependencies": {
