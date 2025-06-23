@@ -6,13 +6,7 @@ import globals from "globals";
 
 export default [
   {
-    ignores: [
-      "dist/**",
-      "node_modules/**",
-      "*.config.js",
-      "vite.config.js",
-      ".eslintrc.*",
-    ],
+    ignores: ["dist/**", "node_modules/**", "*.config.js", "vite.config.js", ".eslintrc.*"],
   },
   {
     files: ["**/*.{js,jsx}"],
@@ -44,21 +38,21 @@ export default [
     rules: {
       ...pluginReact.configs.recommended.rules,
       ...pluginReactHooks.configs.recommended.rules,
-      
+
       "react/react-in-jsx-scope": "off",
-      
+
       "react/prop-types": "off",
-      "no-unused-vars": ["warn", { 
-        argsIgnorePattern: "^_",
-        varsIgnorePattern: "^_",
-        ignoreRestSiblings: true 
-      }],
-      
-      "react-refresh/only-export-components": [
+      "no-unused-vars": [
         "warn",
-        { allowConstantExport: true },
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          ignoreRestSiblings: true,
+        },
       ],
-      
+
+      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+
       "no-console": "warn",
       "prefer-const": "warn",
       "no-var": "error",

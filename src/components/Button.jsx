@@ -15,10 +15,10 @@ const Button = ({ className, href, onClick, children, px, white, external }) => 
   );
 
   const renderLink = () => (
-    <a 
-      href={href} 
-      className={classes} 
-      target={external ? "_blank" : "_self"} 
+    <a
+      href={href}
+      className={classes}
+      target={external ? "_blank" : "_self"}
       rel={external ? "noreferrer noopener" : undefined}
     >
       <span className={spanClasses}>{children}</span>
