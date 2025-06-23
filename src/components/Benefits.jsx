@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Lottie from "lottie-react";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 import { benefits } from "../constants";
 import Heading from "./Heading";
@@ -9,7 +9,16 @@ import { SquigglyTextHighlight } from "./design/Underline";
 
 const Benefits = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const lottieRef = useRef(null);
+  const [playingAnimations, setPlayingAnimations] = useState(new Set());
+
+  const handleMouseEnter = (idx) => {
+    setHoveredIndex(idx);
+    setPlayingAnimations((prev) => new Set(prev).add(idx));
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
 
   return (
     <Section id="features">
@@ -28,12 +37,14 @@ const Benefits = () => {
 
         <div className="flex flex-wrap gap-10 mb-10">
           {benefits.map((benefit, idx) => {
+            const isPlaying = playingAnimations.has(idx);
+
             return (
               <div
                 className="block relative p-0.5 md:max-w-[24rem] group"
                 key={benefit.id}
-                onMouseEnter={() => setHoveredIndex(idx)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                onMouseEnter={() => handleMouseEnter(idx)}
+                onMouseLeave={handleMouseLeave}
               >
                 <AnimatePresence>
                   {hoveredIndex === idx && (
@@ -53,17 +64,21 @@ const Benefits = () => {
                       {benefit.text}
                     </p>
 
-                    <motion.div
-                      className="pointer-events-auto mt-auto w-12 h-12 rounded-xl bg-white backdrop-blur-sm border border-white/20 flex items-center justify-center transition-all duration-300 group-hover:bg-white/100 group-hover:shadow-lg group-hover:scale-110"
-                      onMouseEnter={() => lottieRef.current?.goToAndPlay(0, true)}
-                    >
+                    <motion.div className="pointer-events-auto mt-auto w-12 h-12 rounded-xl bg-white backdrop-blur-sm border border-white/20 flex items-center justify-center transition-all duration-300 group-hover:bg-white/100 group-hover:shadow-lg group-hover:scale-110">
                       <Lottie
+                        key={`lottie-${idx}-${isPlaying ? "playing" : "idle"}`} // Force re-mount
                         animationData={benefit.iconUrl}
-                        lottieRef={lottieRef}
-                        autoplay={false}
+                        autoplay={isPlaying}
                         loop={false}
                         style={{ width: 40, height: 40 }}
                         className={benefit.iconWrapperClass ?? ""}
+                        onComplete={() => {
+                          setPlayingAnimations((prev) => {
+                            const newSet = new Set(prev);
+                            newSet.delete(idx);
+                            return newSet;
+                          });
+                        }}
                       />
                     </motion.div>
                   </div>
