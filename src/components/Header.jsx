@@ -4,7 +4,7 @@ import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 import { brainwave } from "../assets";
 import MenuSvg from "../assets/svg/MenuSvg";
-import { links } from "../config";
+// import { links } from "../config";
 import { navigation } from "../constants";
 import Button from "./Button";
 import { HambugerMenu } from "./design/Header";
@@ -68,9 +68,9 @@ const Header = () => {
           <HambugerMenu />
         </nav>
 
-        <Button className="hidden lg:flex" href={links.sourceCode} external>
+        {/* <Button className="hidden lg:flex" href={links.sourceCode} external>
           Fale Conosco
-        </Button>
+        </Button> */}
 
         <Button onClick={toggleNavigation} className="ml-auto lg:hidden" px="px-3">
           <MenuSvg openNavigation={openNavigation} />

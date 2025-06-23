@@ -29,7 +29,7 @@ const Benefits = () => {
             <>
               Agilize sua rotina com{" "}
               <SquigglyTextHighlight delay={1000} color="#ffffff">
-                Gatilhando.
+                Dotmindlabs.
               </SquigglyTextHighlight>
             </>
           }

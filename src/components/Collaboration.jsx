@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 import { check, dotmindlabsSymbol } from "../assets";
 import { collabApps, collabContent, collabText } from "../constants";
-import Button from "./Button";
+// import Button from "./Button";
 import Section from "./Section";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
 import TooltipIcon from "./design/Tooltips";
@@ -51,8 +51,7 @@ const Collaboration = () => {
               );
             })}
           </ul>
-
-          <Button>Converse Conosco</Button>
+          {/* <Button>Converse Conosco</Button> */}
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
