@@ -22,14 +22,14 @@ const Benefits = () => {
 
   return (
     <Section id="features">
-      <div className="container relative z-2">
+      <div className="container relative z-2 ">
         <Heading
-          className="md:max-w-md lg:max-w-2xl"
+          className="md:max-w-md lg:max-w-4xl text-center"
           title={
             <>
-              Agilize sua rotina com{" "}
+              What bottlenecks are draining your brilliance?{" "}
               <SquigglyTextHighlight delay={1000} color="#ffffff">
-                Dotmindlabs.
+                We can fix that.
               </SquigglyTextHighlight>
             </>
           }

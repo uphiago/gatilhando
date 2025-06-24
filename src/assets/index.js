@@ -21,7 +21,6 @@ import benefitImage3 from "./benefits/square3.png";
 import benefitImage4 from "./benefits/square4.png";
 import benefitImage5 from "./benefits/square5.png";
 import benefitImage6 from "./benefits/square6.png";
-import brainwave from "./brainwave.svg";
 import check2 from "./check-02.svg";
 import chromecast from "./chrome-cast.svg";
 import aws from "./collaboration/aws.png";
@@ -77,7 +76,6 @@ import yourlogo1 from "./tools/yourlogo-1.json";
 import yourlogo from "./yourlogo.svg";
 
 export {
-  brainwave,
   check,
   check2,
   loading1,

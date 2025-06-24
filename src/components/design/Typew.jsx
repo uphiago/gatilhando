@@ -10,7 +10,7 @@ const TypeItComponent = () => {
       startDelay: 500,
       loop: false,
     })
-      .type("Yes, we design stuff to Boost your Business.")
+      .type("We design Software that Boosts your Business.")
       .pause(1400)
       .delete(9)
       .type("Efficiency.")
@@ -35,10 +35,6 @@ const TypeItComponent = () => {
       .pause(1200)
       .type(" Let's Do It")
       .pause(3)
-      .type("!")
-      .pause(1000)
-      .type("!")
-      .pause(1000)
       .type("!")
       .go();
 

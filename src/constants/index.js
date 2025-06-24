@@ -40,37 +40,38 @@ import {
   yourlogo,
   yourlogo1,
 } from "../assets";
-import { links } from "../config";
 
-export const navigation = [
-  {
-    id: "0",
-    title: "Nossa proposta",
-    url: "#features",
-  },
-  {
-    id: "1",
-    title: "Negocios",
-    url: "#how-to-use",
-  },
-  // {
-  //   id: "2",
-  //   title: "How to use",
-  //   url: "#how-to-use",
-  // },
-  // {
-  //   id: "3",
-  //   title: "Roadmap",
-  //   url: "#roadmap",
-  // },
-  {
-    id: "4",
-    title: "Source Code",
-    url: links.sourceCode,
-    onlyMobile: true,
-    external: true,
-  },
-];
+// import { links } from "../config";
+
+// export const navigation = [
+// {
+//   id: "0",
+//   title: "Nossa proposta",
+//   url: "#features",
+// },
+// {
+//   id: "1",
+//   title: "Negocios",
+//   url: "#how-to-use",
+// },
+// {
+//   id: "2",
+//   title: "How to use",
+//   url: "#how-to-use",
+// },
+// {
+//   id: "3",
+//   title: "Roadmap",
+//   url: "#roadmap",
+// },
+// {
+//   id: "4",
+//   title: "Source Code",
+//   url: links.sourceCode,
+//   onlyMobile: true,
+//   external: true,
+// },
+// ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 

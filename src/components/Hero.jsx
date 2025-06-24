@@ -23,7 +23,7 @@ const Hero = () => {
     >
       <div ref={parallaxRef} className="container relative">
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
-          <TypeItComponent/>
+          <TypeItComponent />
           <br />
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
             Clocks stop ticking when workflows click. Free your roadmap from routine.
@@ -31,7 +31,7 @@ const Hero = () => {
         </div>
 
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
-          <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
+          <div className="relative z-1 p-0.5  rounded-2xl bg-conic-gradient  -mt-8 md:-mt-12 lg:-mt-16">
             <div className="relative bg-n-8 rounded-[1rem]">
               <div className="{h-[1.4rem] bg-conic-gradient rounded-t-[0.9rem]}" />
 

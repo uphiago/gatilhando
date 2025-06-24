@@ -1,82 +1,45 @@
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
-import { disablePageScroll, enablePageScroll } from "scroll-lock";
-
-import { brainwave } from "../assets";
-import MenuSvg from "../assets/svg/MenuSvg";
-// import { links } from "../config";
-import { navigation } from "../constants";
-import Button from "./Button";
-import { HambugerMenu } from "./design/Header";
+import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
+import Logo from "../assets/dotmindlabs.svg";
+import { useEffect, useState } from "react";
 
 const Header = () => {
-  const pathname = useLocation();
-  const [openNavigation, setOpenNavigation] = useState(false);
+  const { scrollY } = useScroll();
 
-  const toggleNavigation = () => {
-    if (openNavigation) {
-      setOpenNavigation(false);
-      enablePageScroll();
-    } else {
-      setOpenNavigation(true);
-      disablePageScroll();
-    }
-  };
+  const [isSmall, setIsSmall] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 640px)");
+    const update = (e) => setIsSmall(e.matches);
+    update(mq);
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
 
-  const handleClick = () => {
-    if (!openNavigation) return;
+  // Thresholds and offsets change by viewport size
+  const startFade = isSmall ? 40 : 150;
+  const endFade = isSmall ? 200 : 300;
+  const hideOffset = isSmall ? -80 : -120;
 
-    enablePageScroll();
-    setOpenNavigation(false);
-  };
+  const yRaw = useTransform(scrollY, [0, startFade, endFade], [0, 0, hideOffset]);
+  const y = useSpring(yRaw, { stiffness: 160, damping: 24 });
+
+  const baseOpacity = useTransform(scrollY, [0, startFade, endFade], [1, 1, 0]);
+
+  const hoverFlag = useMotionValue(0);
+  const mergedOpacity = useTransform([baseOpacity, hoverFlag], ([o, h]) => (h > 0 ? 1 : o));
+  const opacity = useSpring(mergedOpacity, { stiffness: 160, damping: 24 });
 
   return (
-    <div
-      className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:bg-blur-sm ${
-        openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
-      }`}
-    >
-      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <a className="block w-[12rem] xl:mr-8" href="#hero">
-          <img src={brainwave} width={190} height={40} alt="Brainwave" className="pointer-events-none select-none" />
-        </a>
-
-        <nav
-          className={`${
-            openNavigation ? "flex" : "hidden"
-          } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
-        >
-          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
-            {navigation.map((item) => (
-              <a
-                key={item.id}
-                href={item.url}
-                target={item.external ? "_blank" : "_self"}
-                rel={item.external ? "noreferrer noopener" : undefined}
-                onClick={handleClick}
-                className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
-                  item.onlyMobile && "lg:hidden"
-                } px-6 py-6 md:py-8 lg:mr-0.25 lg:text-xs lg:font-semibold ${
-                  item.url === pathname.hash ? "z-2 lg:text-n-1" : "lg:text-n-1/50"
-                } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
-              >
-                {item.title}
-              </a>
-            ))}
-          </div>
-
-          <HambugerMenu />
-        </nav>
-
-        {/* <Button className="hidden lg:flex" href={links.sourceCode} external>
-          Fale Conosco
-        </Button> */}
-
-        <Button onClick={toggleNavigation} className="ml-auto lg:hidden" px="px-3">
-          <MenuSvg openNavigation={openNavigation} />
-        </Button>
-      </div>
-    </div>
+    <motion.img
+      src={Logo}
+      alt="Dotmind logo"
+      draggable={false}
+      className="fixed top-7 left-15 h-10 z-50 select-none"
+      style={{ opacity, y }}
+      onHoverStart={() => hoverFlag.set(1)}
+      onHoverEnd={() => hoverFlag.set(0)}
+      whileHover={{ opacity: 1, scale: 1.08 }}
+      transition={{ type: "spring", stiffness: 150, damping: 26 }}
+    />
   );
 };
 
