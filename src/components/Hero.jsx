@@ -9,7 +9,6 @@ import Notification from "./Notification";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 import TypeItComponent from "./design/Typew";
-import { SquigglyTextHighlight } from "./design/Underline";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -24,15 +23,10 @@ const Hero = () => {
     >
       <div ref={parallaxRef} className="container relative">
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
-          <TypeItComponent className="h1 mb-6" />
+          <TypeItComponent/>
           <br />
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            Deixe as rotinas repetitivas por nossa conta. Na{" "}
-            <SquigglyTextHighlight delay={1000} color="#ffffff">
-              {" "}
-              Dotmindlabs
-            </SquigglyTextHighlight>
-            , nós automatizamos enquanto você foca no que importa!
+            Clocks stop ticking when workflows click.
           </p>
         </div>
 
@@ -57,7 +51,7 @@ const Hero = () => {
 
                 <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
                 <ScrollParallax isAbsolutelyPositioned>
-                  <ul className="z-30  absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl ">
+                  <ul className="hidden xl:block z-30  absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl ">
                     {heroIcons.map((icon, index) => (
                       <motion.li
                         whileHover={{ scale: 1.2 }}
@@ -73,7 +67,7 @@ const Hero = () => {
                 <ScrollParallax isAbsolutelyPositioned>
                   <Notification
                     className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
-                    title="Time Estratégico"
+                    title="Thinking Tech"
                   />
                 </ScrollParallax>
               </div>

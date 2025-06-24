@@ -6,7 +6,7 @@ const TypeItComponent = () => {
 
   useEffect(() => {
     const instance = new TypeIt(typeRef.current, {
-      speed: 70,
+      speed: 100,
       startDelay: 500,
       loop: true,
     })
@@ -30,20 +30,18 @@ const TypeItComponent = () => {
       .pause(1200)
       .delete(2)
       .type("y.")
-      .pause(1200)
+      .pause(1400)
       .delete(9)
       .type("Innovation.")
       .pause(1200)
       .delete(11)
       .type("Results.")
       .pause(1200)
-      .type(" Let's Do It..")
-      .pause(800)
-      .type(".")
-      .pause(800)
+      .type(" Let's Do It...")
+      .pause(1200)
       .delete(3)
       .type("!")
-      .pause(20000)
+      .pause(3)
       .type("!")
       .type("!")
       .go();
@@ -51,7 +49,7 @@ const TypeItComponent = () => {
     return () => instance.destroy();
   }, []);
 
-  return <div className="text-5xl font-bold h-24 w-full whitespace-nowrap" ref={typeRef}></div>;
+  return <div className="text-3xl sm:text-4xl md:text-5xl font-bold w-full whitespace-normal break-words line-clamp-3 overflow-hidden -mt-4 h-[7rem]" ref={typeRef}></div>;
 };
 
 export default TypeItComponent;
