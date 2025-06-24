@@ -26,7 +26,7 @@ const Hero = () => {
           <TypeItComponent/>
           <br />
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            Clocks stop ticking when workflows click.
+            Clocks stop ticking when workflows click. Free your roadmap from routine.
           </p>
         </div>
 
