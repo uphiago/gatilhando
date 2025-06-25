@@ -119,23 +119,23 @@ export const roadmap = [
   },
 ];
 
-export const collabText = "Atue com eficiência: otimize, padronize e esteja sempre em conformidade.";
+export const collabText = "Improve performance by optimizing tasks, enforcing standards, and automating compliance.";
 
 export const collabContent = [
   {
     id: "0",
-    title: "Integração de Sistemas",
-    text: "Seus dados conectados em todas as plataformas",
+    title: "System Integration",
+    text: "Your data, connected across every platform.",
   },
   {
     id: "1",
-    title: "Workflows Consistentes",
-    text: "Processos iguais, resultados previsíveis",
+    title: "Consistent Workflows",
+    text: "Same processes. Predictable results.",
   },
   {
     id: "2",
-    title: "Compliance Automático",
-    text: "Normas atendidas em todos os processos",
+    title: "Automated Compliance",
+    text: "Standards met across every process.",
   },
 ];
 
@@ -240,16 +240,16 @@ export const pricing = [
 export const benefits = [
   {
     id: "0",
-    title: "Performance Acelerada",
-    text: "Ganhe tempo com respostas instantâneas e rotinas otimizadas por IA.",
+    title: "Performance Reinvented",
+    text: "Instant answers. Optimized routines. More time for what matters.",
     iconWrapperClass: "scale-[1.1]",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage1,
   },
   {
     id: "1",
-    title: "Otimize sua Rotina",
-    text: "Transforme processos repetitivos em fluxos automáticos e inteligentes. Escalabilidade garantida.",
+    title: "Optimize Your Workflow",
+    text: "Transform repetitive tasks into smart automated flows. Built to scale.",
     iconUrl: benefitIcon2,
     iconWrapperClass: "scale-[0.7] translate-x-[0px] translate-y-[0px]",
     imageUrl: benefitImage2,
@@ -257,16 +257,16 @@ export const benefits = [
   },
   {
     id: "2",
-    title: "Conecte Sistemas",
-    text: "Integração total para operações contínuas e seguras dentro de um ecossistema eficiente.",
+    title: "Integrated Systems, Unified Operations",
+    text: "Keep everything running smoothly in an efficient ecosystem. Operate as one.",
     iconWrapperClass: "scale-[0.75]",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage3,
   },
   {
     id: "3",
-    title: "Automação Inteligente",
-    text: "Processos ágeis e exatos, aprendendo continuamente com seus dados para entregar eficiência e inovação.",
+    title: "Automate with Intelligence",
+    text: "Precision powered by learning systems. Designed to evolve with your data.",
     iconUrl: benefitIcon4,
     iconWrapperClass: "scale-[0.8] translate-x-[1px] translate-y-[-1px]",
     imageUrl: benefitImage4,
@@ -274,16 +274,16 @@ export const benefits = [
   },
   {
     id: "4",
-    title: "Tudo sob Controle",
-    text: "Painéis em tempo real que monitoram cada fluxo com segurança.",
+    title: "Full Visibility, Total Control",
+    text: "Your operations, fully observable and fully protected.",
     iconUrl: benefitIcon5,
     iconWrapperClass: "scale-[1.1]",
     imageUrl: benefitImage5,
   },
   {
     id: "5",
-    title: "Processos sem Fricção",
-    text: "Agilidade contínua, zero repetição, comando remoto imediato.",
+    title: "No Friction. Just Flow.",
+    text: "Continuous agility. Zero repetition. Instant remote control.",
     iconUrl: benefitIcon6,
     iconWrapperClass: "scale-[0.7]",
     imageUrl: benefitImage6,

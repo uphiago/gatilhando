@@ -10,7 +10,7 @@ const TypeItComponent = () => {
       startDelay: 500,
       loop: false,
     })
-      .type("We design Software that Boosts your Business.")
+      .type("We design drama free Software that Boosts your Business.")
       .pause(1400)
       .delete(9)
       .type("Efficiency.")
