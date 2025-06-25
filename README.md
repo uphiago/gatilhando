@@ -1,1 +1,0 @@
-We design stuff to boost your business... ideas... efficiency... strategy... innovation... results. Dotmindlabs.

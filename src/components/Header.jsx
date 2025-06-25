@@ -14,7 +14,6 @@ const Header = () => {
     return () => mq.removeEventListener("change", update);
   }, []);
 
-  // Thresholds and offsets change by viewport size
   const startFade = isSmall ? 40 : 150;
   const endFade = isSmall ? 200 : 300;
   const hideOffset = isSmall ? -80 : -120;
