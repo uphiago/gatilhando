@@ -43,7 +43,7 @@ const TypeItComponent = () => {
 
   return (
     <div
-      className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-bold w-full whitespace-normal break-words line-clamp-3 overflow-hidden -mt-4 h-[12rem]"
+      className="text-4xl sm:text-4xl md:text-4xl lg:text-5xl font-bold w-full whitespace-normal break-words line-clamp-3 overflow-hidden -mt-4 h-[12rem]"
       ref={typeRef}
     ></div>
   );

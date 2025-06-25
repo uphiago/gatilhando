@@ -33,7 +33,7 @@ const Header = () => {
       src={Logo}
       alt="Dotmind logo"
       draggable={false}
-      className="fixed top-7 left-15 h-10 z-50 select-none"
+      className="fixed top-4 left-4 sm:top-7 sm:left-15 h-10 z-50 select-none"
       style={{ opacity, y }}
       onHoverStart={() => hoverFlag.set(1)}
       onHoverEnd={() => hoverFlag.set(0)}
