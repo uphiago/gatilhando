@@ -1,6 +1,7 @@
-import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
-import Logo from "../assets/dotmindlabs.svg";
+import { motion, useMotionValue, useScroll, useSpring, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
+
+import Logo from "../assets/dotmindlabs.svg";
 
 const Header = () => {
   const { scrollY } = useScroll();

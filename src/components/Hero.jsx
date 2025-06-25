@@ -48,8 +48,8 @@ const Hero = () => {
                   playsInline
                   preload="auto"
                 />
-                <div className="">
-                  <Generating className="absolute right-4 bottom-5 md:right-60 md:bottom-8 md:w-[31rem] " />
+                <div className="absolute inset-x-0 bottom-8 flex justify-center">
+                  <Generating className="w-full max-w-[22rem] transition-none" />
                 </div>
 
                 <ScrollParallax isAbsolutelyPositioned>
