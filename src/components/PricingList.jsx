@@ -1,4 +1,4 @@
-import { check } from "../assets";
+import { check2 } from "../assets";
 import { pricing } from "../constants";
 import Button from "./Button";
 
@@ -29,7 +29,7 @@ const PricingList = () => {
           <ul>
             {plan.features.map((feature, j) => (
               <li key={`plan-${i}-feature-${j}`} className="flex items-start py-5 border-t border-n-6">
-                <img src={check} alt="Check" width={24} height={24} className="pointer-events-none select-none" />
+                <img src={check2} alt="Check" width={24} height={24} className="pointer-events-none select-none" />
                 <p className="body-2 ml-4">{feature}</p>
               </li>
             ))}

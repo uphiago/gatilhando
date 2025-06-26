@@ -1,5 +1,5 @@
-import { useState } from "react";
-
+import { useState, useRef } from "react";
+import Lottie from "lottie-react";
 import { check, service1, service2, service3 } from "../assets";
 import { brainwaveServices, brainwaveServicesIcons } from "../constants";
 import Generating from "./Generating";
@@ -10,6 +10,7 @@ import { SquigglyTextHighlight } from "./design/Underline";
 
 const Services = () => {
   const [isPlaying, setIsPlaying] = useState(true);
+  const lottieRefs = useRef(brainwaveServices.map(() => ({ current: null })));
 
   return (
     <Section id="how-to-use">
@@ -17,13 +18,13 @@ const Services = () => {
         <Heading
           title={
             <>
-              Fluxos Rápidos,{" "}
+              Speed and Agility in {" "}  
               <SquigglyTextHighlight delay={1000} color="#ffffff">
-                Negócios Ágeis!
+                Every Operation!
               </SquigglyTextHighlight>
             </>
           }
-          text="Unifique aplicações, padronize tarefas e cresça sem limites."
+          text="Unify applications, standardize tasks, and grow without limits."
         />
 
         <div className="relative">
@@ -40,14 +41,26 @@ const Services = () => {
             </div>
 
             <div className="relative z-1 max-w-[17rem] ml-auto">
-              <h4 className="h4 mb-4">Automação. Monitoramento. Escalabilidade.</h4>
+              <h4 className="h4 mb-4">Automation. Monitoring. Scaling.</h4>
               <p className="body-2 mb-[3rem] text-n-3">
-                Chegou a sua hora de acelerar processos e destravar resultados!
+                Its your time to speed up processes and unlock results!
               </p>
               <ul className="body-2">
                 {brainwaveServices.map((item, i) => (
                   <li key={i} className="flex items-start py-4 border-t border-n-6">
-                    <img width={24} height={24} src={check} alt="check" className="pointer-events-none select-none" />
+                    {/* <img width={24} height={24} src={check} alt="check" className="pointer-events-none select-none" /> */}
+                  <Lottie
+                    lottieRef={lottieRefs.current[i]}
+                    animationData={check}
+                    autoplay={false}
+                    loop={false}
+                    speed={2}
+                    style={{ width: 24, height: 24 }}
+                    onMouseEnter={() => {
+                      lottieRefs.current[i].current?.stop();
+                      lottieRefs.current[i].current?.play();
+                    }}
+                  />
                     <p className="ml-4">{item}</p>
                   </li>
                 ))}
@@ -71,9 +84,9 @@ const Services = () => {
               </div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                <h4 className="h4 mb-4">Automação de Tarefas</h4>
+                <h4 className="h4 mb-4">Productivity on autopilot</h4>
                 <p className="body-2 mb-[3rem] text-n-3">
-                  Potencialize sua produtividade: implemente automação e veja os resultados.
+                  Set tasks to run themselves and track the gains.
                 </p>
               </div>
 
@@ -82,9 +95,9 @@ const Services = () => {
 
             <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
-                <h4 className="h4 mb-4">Sistemas Integrados</h4>
+                <h4 className="h4 mb-4">Integrated Systems</h4>
                 <p className="body-2 mb-[2rem] text-n-3">
-                  O motor de integração de processos e sistemas mais eficiente do mercado. O que você vai criar?
+                  The fastest engines for connecting processes and platforms. What will you create?
                 </p>
 
                 <ul className="flex items-center justify-between">

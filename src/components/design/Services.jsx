@@ -24,11 +24,11 @@ export const PhotoChatMessage = () => {
       <Typewriter
         options={{
           strings: [
-            "Hey, automatize este processo.",
-            "Dispare uma automação para esta tarefa.",
-            "Padronize as rotinas deste workflow.",
-            "Aplicar automação inteligente aqui.",
-            "Monitorar operação em tempo real.",
+            "Connect all systems now.",
+            "Optimize this workflow immediately.",
+            "Orchestrate continuous backups.",
+            "Automate user onboarding.",
+            "Tag resources for cost tracking.",
           ],
           autoStart: true,
           loop: true,
@@ -44,14 +44,14 @@ export const VideoChatMessage = ({ isPlaying }) => {
     <div className="absolute top-8 left-[3.125rem] w-full max-w-[14rem] pt-2.5 pr-2.5 pb-7 pl-5 bg-n-6 rounded-t-xl rounded-br-xl font-code text-base md:max-w-[17.5rem]">
       <Typewriter
         options={{
-          strings: isPlaying ? ["Sincronizando Dados..."] : ["Dados Sincronizados!"],
+          strings: isPlaying ? ["Synchronizing Data..."] : ["Data Sync Complete!"],
           cursor: isPlaying ? "|" : "",
           autoStart: true,
           deleteSpeed: isPlaying ? "natural" : Infinity,
           loop: isPlaying,
         }}
       />
-      <div className="absolute left-5 -bottom-[1.125rem] flex items-center justify-center w-[2.25rem] h-[2.25rem] bg-color-1 rounded-[0.75rem]">
+      <div className="absolute left-5 -bottom-[1.125rem] flex items-center justify-center w-[2.25rem] h-[2.25rem] bg-black rounded-[0.75rem]">
         <img src={dotmindlabsSymbolWhite} width={26} height={26} alt="Brainwave" />
       </div>
       <div className="tagline absolute right-2.5 bottom-1 text-[0.625rem] text-n-3 uppercase">
@@ -93,8 +93,8 @@ export const VideoBar = ({ isPlaying, setIsPlaying }) => {
         onClick={() => setIsPlaying(!isPlaying)}
       />
 
-      <div className="flex-1 bg-[#D9D9D9]">
-        <div ref={progressRef} className="h-0.5 bg-color-1 transition-all" />
+      <div className="flex-1 bg-black">
+        <div ref={progressRef} className="h-0.5 bg-white transition-all" />
       </div>
     </div>
   );

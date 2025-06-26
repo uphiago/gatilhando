@@ -79,7 +79,7 @@ export const notificationImages = [notification1, notification2, notification3];
 
 export const companyLogos = [yourlogo1, yourlogo, yourlogo, yourlogo, yourlogo];
 
-export const brainwaveServices = ["Triggers Inteligentes", "Painéis 24/7", "Escala Imediata"];
+export const brainwaveServices = ["Intelligent Triggers", "24/7 Dashboards", "Immediate Scale"];
 
 export const brainwaveServicesIcons = [recording03, recording01, disc02, chromecast, sliders04];
 
