@@ -13,11 +13,6 @@ export default defineConfig({
           id: process.env.VITE_GTM_ID,
         }
       ],
-      analytics: [
-        {
-          id: process.env.VITE_G_ID,
-        }
-      ],
     })
   ],
 });
