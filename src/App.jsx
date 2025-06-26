@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 // import Pricing from "./components/Pricing";
 // import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";
+import Contact from "./components/Contact"
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         {/* <Pricing /> */}
         {/* <Roadmap /> */}
         <Footer />
+        <Contact />
       </div>
       <ButtonGradient />
     </>

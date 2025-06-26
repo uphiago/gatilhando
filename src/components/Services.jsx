@@ -84,7 +84,7 @@ const Services = () => {
               </div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                <h4 className="h4 mb-4">Productivity on autopilot</h4>
+                <h4 className="h4 mb-4">Productivity on Autopilot</h4>
                 <p className="body-2 mb-[3rem] text-n-3">
                   Set tasks to run themselves and track the gains.
                 </p>

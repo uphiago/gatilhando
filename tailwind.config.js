@@ -1,10 +1,17 @@
 /** @type {import('tailwindcss').Config} */
+import withMT from "@material-tailwind/react/utils/withMT";
 import lineClamp from "@tailwindcss/line-clamp";
 import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "./public/assets/**/*.{js,ts,jsx,tsx}"],
+export default withMT({
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./public/assets/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -67,19 +74,10 @@ export default {
       borderWidth: {
         DEFAULT: "0.0625rem",
       },
-      // backgroundImage: {
-      //   "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
-      //   "conic-gradient": "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
-      //   "benefit-card-1": "url(assets/benefits/card-1.svg)",
-      //   "benefit-card-2": "url(assets/benefits/card-2.svg)",
-      //   "benefit-card-3": "url(assets/benefits/card-3.svg)",
-      //   "benefit-card-4": "url(assets/benefits/card-4.svg)",
-      //   "benefit-card-5": "url(assets/benefits/card-5.svg)",
-      //   "benefit-card-6": "url(assets/benefits/card-6.svg)",
-      // },
     },
   },
   plugins: [
+    lineClamp,
     plugin(function ({ addBase, addComponents, addUtilities }) {
       addBase({});
       addComponents({
@@ -133,4 +131,4 @@ export default {
       });
     }),
   ],
-};
+});
