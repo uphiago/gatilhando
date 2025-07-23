@@ -8,7 +8,7 @@ import Generating from "./Generating";
 import Notification from "./Notification";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
-import TypeItComponent from "./design/Typew";
+// import TypeItComponent from "./design/Typew";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -23,7 +23,10 @@ const Hero = () => {
     >
       <div ref={parallaxRef} className="container relative">
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[2rem] md:mb-20 lg:mb-[6rem]">
-          <TypeItComponent />
+          {/* <TypeItComponent /> */}
+          <p className="body-1 max-w-4xl mx-auto mb-6 text-n-2 lg:mb-8 text-2xl lg:text-5xl font-semibold">
+            We Design Drama Free Software that Boosts your Business
+          </p>
           <br />
           <p className="body-1 max-w-4xl mx-auto mb-6 text-n-2 lg:mb-8">
             Clocks stop ticking when workflows click. Free your roadmap from routine.
