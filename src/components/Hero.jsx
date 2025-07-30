@@ -44,10 +44,10 @@ const Hero = () => {
             className="relative z-1 max-w-[62rem] mx-auto text-center mb-[2rem] md:mb-20 lg:mb-[-10rem] transform translate-y-8 lg:translate-y-10"
             style={{ opacity, filter: `blur(${blur}px)` }}
           >
-            <p className="body-1 max-w-4xl mx-auto mt-20 mb-6 #ffffff lg:mb-8 text-2xl lg:text-5xl font-semibold">
+            <p className="body-1 max-w-4xl mx-auto mt-20 mb-6 #ffffff lg:mb-8 text-4xl lg:text-5xl font-semibold">
               We Design Drama Free Software
             </p>
-            <p className="body-1 max-w-4xl mx-auto mb-6 #ffffff lg:mb-8">
+            <p className="body-1 max-w-4xl mx-auto mb-6 #ffffff lg:mb-8 text-lg md:text-xl lg:text-2xl">
               Clocks stop ticking when workflows click. Free your roadmap from routine.
             </p>
           </div>
