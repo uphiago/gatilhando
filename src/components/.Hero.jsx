@@ -9,8 +9,6 @@ import Notification from "./Notification";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 
-// import TypeItComponent from "./design/Typew";
-
 const Hero = () => {
   const parallaxRef = useRef(null);
 

@@ -18,9 +18,12 @@ const Hero = () => {
             opacity={0.8}
           />
         </div>
-        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[2rem] md:mb-20 lg:mb-[-5rem]">
+        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[2rem] md:mb-20 lg:mb-[-10rem] transform translate-y-8 lg:translate-y-10">
           <p className="body-1 max-w-4xl mx-auto mb-6 #ffffff lg:mb-8 text-2xl lg:text-5xl font-semibold">
             We Design Drama Free Software
+          </p>
+          <p className="body-1 max-w-4xl mx-auto mb-6 #ffffff lg:mb-8">
+            Clocks stop ticking when workflows click. Free your roadmap from routine.
           </p>
         </div>
       </div>
