@@ -125,17 +125,17 @@ export const collabContent = [
   {
     id: "0",
     title: "System Integration",
-    text: "Your data, connected across every platform.",
+    text: "Connect your data across all platforms.",
   },
   {
     id: "1",
     title: "Consistent Workflows",
-    text: "Same processes. Predictable results.",
+    text: "Repeatable processes, predictable outcomes.",
   },
   {
     id: "2",
     title: "Automated Compliance",
-    text: "Standards met across every process.",
+    text: "Meet and exceed standards automatically.",
   },
 ];
 
@@ -191,7 +191,7 @@ export const collabApps = [
   },
   {
     id: "7",
-    title: "Internet",
+    title: "Services",
     icon: google,
     width: 38,
     height: 32,
@@ -241,7 +241,7 @@ export const benefits = [
   {
     id: "0",
     title: "Performance Reinvented",
-    text: "Instant answers. Optimized routines. More time for what matters.",
+    text: "Instant insights. Optimized workflows. More time for innovation.",
     iconWrapperClass: "scale-[1.1]",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage1,
@@ -249,7 +249,7 @@ export const benefits = [
   {
     id: "1",
     title: "Optimize Your Workflow",
-    text: "Transform repetitive tasks into smart automated flows. Built to scale.",
+    text: "Transform repetitive tasks into smart automated processes, designed for scale.",
     iconUrl: benefitIcon2,
     iconWrapperClass: "scale-[0.7] translate-x-[0px] translate-y-[0px]",
     imageUrl: benefitImage2,
@@ -258,7 +258,7 @@ export const benefits = [
   {
     id: "2",
     title: "Integrated Systems, Unified Operations",
-    text: "Keep everything running smoothly in an efficient ecosystem. Operate as one.",
+    text: "Operate seamlessly with systems that communicate effortlessly.",
     iconWrapperClass: "scale-[0.75]",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage3,
@@ -266,7 +266,7 @@ export const benefits = [
   {
     id: "3",
     title: "Automate with Intelligence",
-    text: "Precision powered by learning systems. Designed to evolve with your data.",
+    text: "AI-driven precision that evolves continuously with your business.",
     iconUrl: benefitIcon4,
     iconWrapperClass: "scale-[0.8] translate-x-[1px] translate-y-[-1px]",
     imageUrl: benefitImage4,
@@ -275,7 +275,7 @@ export const benefits = [
   {
     id: "4",
     title: "Full Visibility, Total Control",
-    text: "Your operations, fully observable and fully protected.",
+    text: "Comprehensive monitoring for reliable, secure operations.",
     iconUrl: benefitIcon5,
     iconWrapperClass: "scale-[1.1]",
     imageUrl: benefitImage5,
@@ -283,7 +283,7 @@ export const benefits = [
   {
     id: "5",
     title: "No Friction. Just Flow.",
-    text: "Continuous agility. Zero repetition. Instant remote control.",
+    text: "Maximum agility. Zero repetition. Immediate action.",
     iconUrl: benefitIcon6,
     iconWrapperClass: "scale-[0.7]",
     imageUrl: benefitImage6,

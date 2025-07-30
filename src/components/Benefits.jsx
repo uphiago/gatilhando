@@ -22,14 +22,14 @@ const Benefits = () => {
 
   return (
     <Section id="features">
-      <div className="container relative z-2 ">
+      <div className="container relative z-2 lg:mt-72">
         <Heading
-          className="md:max-w-md lg:max-w-4xl text-center"
+          className="md:max-w-md lg:max-w-4xl text-center lg:mt-24"
           title={
             <>
-              What bottlenecks are draining your brilliance?{" "}
+              What bottlenecks are draining your productivity?{" "}
               <SquigglyTextHighlight delay={1000} color="#ffffff">
-                We can fix that.
+                We eliminate them.
               </SquigglyTextHighlight>
             </>
           }
@@ -66,7 +66,7 @@ const Benefits = () => {
 
                     <motion.div className="pointer-events-auto mt-auto w-12 h-12 rounded-xl bg-white backdrop-blur-sm border border-white/20 flex items-center justify-center transition-all duration-300 group-hover:bg-white/100 group-hover:shadow-lg group-hover:scale-110">
                       <Lottie
-                        key={`lottie-${idx}-${isPlaying ? "playing" : "idle"}`} // Force re-mount
+                        key={`lottie-${idx}-${isPlaying ? "playing" : "idle"}`}
                         animationData={benefit.iconUrl}
                         autoplay={isPlaying}
                         loop={false}

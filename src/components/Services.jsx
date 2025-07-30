@@ -1,5 +1,6 @@
-import { useState, useRef } from "react";
 import Lottie from "lottie-react";
+import { useRef, useState } from "react";
+
 import { check, service1, service2, service3 } from "../assets";
 import { brainwaveServices, brainwaveServicesIcons } from "../constants";
 import Generating from "./Generating";
@@ -18,7 +19,7 @@ const Services = () => {
         <Heading
           title={
             <>
-              Speed and Agility in {" "}  
+              Speed and Agility in{" "}
               <SquigglyTextHighlight delay={1000} color="#ffffff">
                 Every Operation!
               </SquigglyTextHighlight>
@@ -42,25 +43,23 @@ const Services = () => {
 
             <div className="relative z-1 max-w-[17rem] ml-auto">
               <h4 className="h4 mb-4">Automation. Monitoring. Scaling.</h4>
-              <p className="body-2 mb-[3rem] text-n-3">
-                Its your time to speed up processes and unlock results!
-              </p>
+              <p className="body-2 mb-[3rem] text-n-3">Its your time to speed up processes and unlock results!</p>
               <ul className="body-2">
                 {brainwaveServices.map((item, i) => (
                   <li key={i} className="flex items-start py-4 border-t border-n-6">
                     {/* <img width={24} height={24} src={check} alt="check" className="pointer-events-none select-none" /> */}
-                  <Lottie
-                    lottieRef={lottieRefs.current[i]}
-                    animationData={check}
-                    autoplay={false}
-                    loop={false}
-                    speed={2}
-                    style={{ width: 24, height: 24 }}
-                    onMouseEnter={() => {
-                      lottieRefs.current[i].current?.stop();
-                      lottieRefs.current[i].current?.play();
-                    }}
-                  />
+                    <Lottie
+                      lottieRef={lottieRefs.current[i]}
+                      animationData={check}
+                      autoplay={false}
+                      loop={false}
+                      speed={2}
+                      style={{ width: 24, height: 24 }}
+                      onMouseEnter={() => {
+                        lottieRefs.current[i].current?.stop();
+                        lottieRefs.current[i].current?.play();
+                      }}
+                    />
                     <p className="ml-4">{item}</p>
                   </li>
                 ))}
@@ -85,9 +84,7 @@ const Services = () => {
 
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
                 <h4 className="h4 mb-4">Productivity on Autopilot</h4>
-                <p className="body-2 mb-[3rem] text-n-3">
-                  Set tasks to run themselves and track the gains.
-                </p>
+                <p className="body-2 mb-[3rem] text-n-3">Set tasks to run themselves and track the gains.</p>
               </div>
 
               <PhotoChatMessage />
