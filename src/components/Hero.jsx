@@ -1,12 +1,33 @@
+import { useEffect, useState } from "react";
+import { ScrollParallax } from "react-just-parallax";
+
 import Section from "./Section";
 import { BottomLine } from "./design/Hero";
 import RippleGrid from "./design/RippleGrid";
 
 const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const opacity = Math.max(0, 1 - scrollY / 400);
+  const blur = Math.min(10, scrollY / 50);
   return (
     <Section className="pt-[8rem] -mt-[5rem]" crosses crossesOffset="lg:translate-y-[5.25rem]" customPaddings id="hero">
       <div className="container relative">
-        <div style={{ position: "relative", height: "500px", overflow: "hidden" }}>
+        <div
+          style={{
+            zIndex: 999,
+            position: "relative",
+            height: "500px",
+            transform: "translateY(200px)",
+            overflow: "hidden",
+          }}
+        >
           <RippleGrid
             enableRainbow={false}
             gridColor="#ffffff"
@@ -18,14 +39,19 @@ const Hero = () => {
             opacity={0.8}
           />
         </div>
-        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[2rem] md:mb-20 lg:mb-[-10rem] transform translate-y-8 lg:translate-y-10">
-          <p className="body-1 max-w-4xl mx-auto mb-6 #ffffff lg:mb-8 text-2xl lg:text-5xl font-semibold">
-            We Design Drama Free Software
-          </p>
-          <p className="body-1 max-w-4xl mx-auto mb-6 #ffffff lg:mb-8">
-            Clocks stop ticking when workflows click. Free your roadmap from routine.
-          </p>
-        </div>
+        <ScrollParallax isAbsolutelyPositioned strength={-0.5}>
+          <div
+            className="relative z-1 max-w-[62rem] mx-auto text-center mb-[2rem] md:mb-20 lg:mb-[-10rem] transform translate-y-8 lg:translate-y-10"
+            style={{ opacity, filter: `blur(${blur}px)` }}
+          >
+            <p className="body-1 max-w-4xl mx-auto mt-20 mb-6 #ffffff lg:mb-8 text-2xl lg:text-5xl font-semibold">
+              We Design Drama Free Software
+            </p>
+            <p className="body-1 max-w-4xl mx-auto mb-6 #ffffff lg:mb-8">
+              Clocks stop ticking when workflows click. Free your roadmap from routine.
+            </p>
+          </div>
+        </ScrollParallax>
       </div>
       <BottomLine />
     </Section>

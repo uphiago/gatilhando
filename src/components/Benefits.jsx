@@ -22,7 +22,7 @@ const Benefits = () => {
 
   return (
     <Section id="features">
-      <div className="container relative z-2 lg:mt-72">
+      <div className="container relative z-2 lg:mt-72 mt-60">
         <Heading
           className="md:max-w-md lg:max-w-4xl text-center lg:mt-24"
           title={
@@ -35,7 +35,7 @@ const Benefits = () => {
           }
         />
 
-        <div className="flex flex-wrap gap-10 mb-10 translate-x-[36px]">
+        <div className="flex flex-wrap gap-10 mb-10 justify-center">
           {benefits.map((benefit, idx) => {
             const isPlaying = playingAnimations.has(idx);
 
