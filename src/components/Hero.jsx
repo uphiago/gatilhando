@@ -39,9 +39,9 @@ const Hero = () => {
             opacity={0.8}
           />
         </div>
-        <ScrollParallax isAbsolutelyPositioned strength={-0.5}>
+        <ScrollParallax isAbsolutelyPositioned strength={0}>
           <div
-            className="relative z-1 max-w-[62rem] mx-auto text-center mb-[2rem] md:mb-20 lg:mb-[-10rem] transform translate-y-8 lg:translate-y-10"
+            className="relative z-1 max-w-[62rem] mx-auto text-center mb-[2rem] md:mb-20 lg:mb-[-10rem] transform translate-y-8 lg:translate-y-0"
             style={{ opacity, filter: `blur(${blur}px)` }}
           >
             <p className="body-1 max-w-4xl mx-auto mt-20 mb-6 #ffffff lg:mb-8 text-4xl lg:text-5xl font-semibold">
