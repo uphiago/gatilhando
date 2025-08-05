@@ -223,18 +223,18 @@ export const pricing = [
     ],
     premium: true,
   },
-  {
-    id: "2",
-    title: "Enterprise",
-    description: "Custom AI chatbot, advanced analytics, dedicated account",
-    price: null,
-    features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
-    ],
-    premium: false,
-  },
+  // {
+  //   id: "2",
+  //   title: "Enterprise",
+  //   description: "Custom AI chatbot, advanced analytics, dedicated account",
+  //   price: null,
+  //   features: [
+  //     "An AI chatbot that can understand your queries",
+  //     "Personalized recommendations based on your preferences",
+  //     "Ability to explore the app and its features without any cost",
+  //   ],
+  //   premium: false,
+  // },
 ];
 
 export const benefits = [

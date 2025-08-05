@@ -1,16 +1,16 @@
 import DraftsRoundedIcon from "@mui/icons-material/DraftsRounded";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
-import InstagramIcon from "@mui/icons-material/Instagram";
+// import InstagramIcon from "@mui/icons-material/Instagram";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import { Backdrop, Box, SpeedDial, SpeedDialAction, SpeedDialIcon } from "@mui/material";
 import { motion } from "framer-motion";
 import * as React from "react";
 
 const actions = [
-  {
-    icon: <InstagramIcon size={26} />,
-    link: "https://instagram.com/Dotmindlabs",
-  },
+  // {
+  //   icon: <InstagramIcon size={26} />,
+  //   link: "https://instagram.com/Dotmindlabs",
+  // },
   {
     icon: <TelegramIcon size={26} />,
     link: "https://t.me/Dotmindlabs",
