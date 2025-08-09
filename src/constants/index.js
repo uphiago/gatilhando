@@ -191,7 +191,7 @@ export const collabApps = [
   },
   {
     id: "7",
-    title: "Services",
+    title: "Web Services",
     icon: google,
     width: 38,
     height: 32,

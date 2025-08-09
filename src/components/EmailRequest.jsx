@@ -1,133 +1,167 @@
-import React, { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import { Send, FileText, X, MessageCircle } from 'lucide-react';
 import 'react-toastify/dist/ReactToastify.css';
+import { useEmailRequest } from '../config/email';
 
 export default function EmailRequestPopup() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [email, setEmail] = useState('');
-  const [description, setDescription] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const {
+    isOpen,
+    setIsOpen,
+    email,
+    setEmail,
+    description,
+    setDescription,
+    isSubmitting,
+    handleSubmit,
+    emailTouched,
+    setEmailTouched,
+  } = useEmailRequest();
 
-  /* meta básica que não exige permissões */
-  const collectMeta = () => ({
-    tz: Intl.DateTimeFormat().resolvedOptions().timeZone,
-    locale: navigator.language,
-    userAgent: navigator.userAgent,
-    viewport: { w: window.innerWidth, h: window.innerHeight },
-    page: window.location.href,
-    referrer: document.referrer || null,
-  });
-
-  const handleSubmit = async () => {
-    if (!email || !description) {
-      toast.error('Preencha todos os campos');
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      const meta = collectMeta();
-
-      const res = await fetch('/api/send-doc', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, description, meta }),
-      });
-
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
-
-      toast.success('Solicitação enviada! Confira seu e-mail 😉');
-      setEmail('');
-      setDescription('');
-      setIsOpen(false);
-    } catch (err) {
-      toast.error(err.message || 'Falha inesperada');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  const isValidEmail = email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const isInvalidEmail = emailTouched && email && email.length > 0 && !isValidEmail;
 
   return (
     <>
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-2xl transition-all duration-300 z-50 group hover:scale-105"
+          className="fixed bottom-6 right-6 bg-black hover:bg-gray-900 text-white p-4 rounded-full shadow-2xl transition-all duration-300 z-50 group hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/20"
+          aria-label="Solicitar documentação"
+          aria-expanded={isOpen}
+          title="Solicitar Documentação"
         >
           <MessageCircle className="w-6 h-6" />
-          <div className="absolute -top-2 -right-2 w-3 h-3 bg-red-500 rounded-full animate-pulse" />
-          <div className="absolute bottom-full right-0 mb-2 px-3 py-1 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
-            Solicitar Documentação
-            <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800" />
-          </div>
+          <div className="absolute -top-2 -right-2 w-3 h-3 bg-white rounded-full animate-pulse shadow-sm" />
         </button>
       )}
 
       {isOpen && (
-        <div className="fixed bottom-6 right-6 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200 z-50 animate-in slide-in-from-bottom-2 duration-300">
-          <div className="flex items-center justify-between p-4 border-b border-gray-100">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                <FileText className="w-4 h-4 text-blue-600" />
+        <>
+          <div 
+            className="fixed inset-0 z-40"
+            onClick={() => setIsOpen(false)}
+          />
+          <div 
+            className="fixed bottom-6 right-6 w-80 bg-black/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/10 z-50 animate-in slide-in-from-bottom-2 duration-300"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+          >
+            <div className="flex items-center justify-between p-4 border-b border-white/10">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-white/10 border border-white/20 rounded-full flex items-center justify-center">
+                  <FileText className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 id="modal-title" className="font-semibold text-white text-sm">Documentação AI</h3>
+                  <p className="text-xs text-gray-400 flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+                    Geração em tempo real
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 text-sm">Documentação</h3>
-                <p className="text-xs text-gray-500">Geração automática</p>
-              </div>
+              <button 
+                onClick={() => setIsOpen(false)} 
+                className="p-1.5 hover:bg-white/10 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white/20"
+                aria-label="Fechar modal"
+              >
+                <X className="w-4 h-4 text-gray-400 hover:text-white" />
+              </button>
             </div>
-            <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-gray-100 rounded-full">
-              <X className="w-4 h-4 text-gray-400" />
-            </button>
-          </div>
 
-          <div className="p-4 space-y-3">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Seu email"
-              className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500"
-              disabled={isSubmitting}
-            />
-            <textarea
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              placeholder="O que você precisa documentar?"
-              rows={3}
-              className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 resize-none"
-              disabled={isSubmitting}
-            />
-            <button
-              onClick={handleSubmit}
-              disabled={isSubmitting}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 text-sm transition-all"
-            >
-              {isSubmitting ? (
-                <>
-                  <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                  Enviando...
-                </>
-              ) : (
-                <>
-                  <Send className="w-4 h-4" />
-                  Solicitar
-                </>
-              )}
-            </button>
+            <div className="p-5 space-y-4">
+              <div className="space-y-2">
+                <label htmlFor="email-input" className="block text-sm font-medium text-white">
+                  Email para recebimento
+                </label>
+                <input
+                  id="email-input"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  onBlur={() => setEmailTouched(true)}
+                  placeholder="seu@email.com"
+                  className={`w-full px-4 py-3 text-sm bg-white/5 border rounded-xl transition-all text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:border-transparent ${
+                    isInvalidEmail
+                      ? 'border-red-400 focus:ring-red-400/50' 
+                      : isValidEmail
+                      ? 'border-white focus:ring-white/50'
+                      : 'border-white/20 focus:ring-white/30'
+                  }`}
+                  disabled={isSubmitting}
+                  required
+                  aria-describedby="email-hint"
+                />
+                <span id="email-hint" className={`text-xs flex items-center gap-1 ${
+                  isInvalidEmail
+                    ? 'text-red-400'
+                    : isValidEmail
+                    ? 'text-white'
+                    : 'text-gray-400'
+                }`}>
+                  {isInvalidEmail ? (
+                    <span>❌ Email inválido</span>
+                  ) : isValidEmail ? (
+                    <span>✅ Email válido</span>
+                  ) : (
+                    <span>Receberá a documentação personalizada</span>
+                  )}
+                </span>
+              </div>
+              
+              <div className="space-y-2">
+                <label htmlFor="description-input" className="block text-sm font-medium text-white">
+                  O que documentar?
+                </label>
+                <textarea
+                  id="description-input"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  placeholder="Ex: API de pagamentos, dashboard admin, fluxo de login..."
+                  rows={3}
+                  className="w-full px-4 py-3 text-sm bg-white/5 border border-white/20 rounded-xl focus:ring-2 focus:ring-white/30 focus:border-transparent resize-none transition-all text-white placeholder-gray-500"
+                  disabled={isSubmitting}
+                  required
+                  aria-describedby="description-hint"
+                  maxLength={300}
+                />
+                <div className="flex justify-between items-center">
+                  <span id="description-hint" className="text-xs text-gray-400">
+                    Seja específico para melhores resultados
+                  </span>
+                  <span className="text-xs text-gray-400">
+                    {description.length}/300
+                  </span>
+                </div>
+              </div>
+              
+              <button
+                onClick={handleSubmit}
+                disabled={isSubmitting || !isValidEmail || !description}
+                className="w-full bg-white hover:bg-gray-100 disabled:bg-gray-600 text-black disabled:text-white font-medium py-3 rounded-xl flex items-center justify-center gap-2 text-sm transition-all transform hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-white/30 disabled:transform-none disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? (
+                  <>
+                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    Processando...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-4 h-4" />
+                    Gerar Documentação
+                  </>
+                )}
+              </button>
+            </div>
           </div>
-
-          <p className="text-xs text-gray-400 text-center pb-4">📄 Receba a doc personalizada no seu email</p>
-        </div>
+        </>
       )}
 
       <ToastContainer
         position="bottom-right"
         autoClose={4000}
         hideProgressBar
-        theme="light"
+        theme="dark"
         toastClassName="text-sm rounded-lg shadow-lg border mb-16"
         style={{ marginBottom: '100px' }}
       />
