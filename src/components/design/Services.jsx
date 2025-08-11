@@ -39,7 +39,7 @@ export const PhotoChatMessage = () => {
 export const VideoChatMessage = ({ isPlaying }) => {
   const { t } = useTranslation();
   return (
-    <div className="absolute top-8 left-[3.125rem] w-full max-w-[14rem] pt-2.5 pr-2.5 pb-7 pl-5 bg-n-6 rounded-t-xl rounded-br-xl font-code text-base md:max-w-[17.5rem]">
+    <div className="absolute top-8 left-[3.125rem] w-full max-w-[14rem] pt-2.5 pr-2.5 pb-7 pl-5 bg-black rounded-t-xl rounded-br-xl font-code text-base md:max-w-[17.5rem]">
       <Typewriter
         options={{
           strings: isPlaying ? [t("services.video.playing")] : [t("services.video.done")],
@@ -63,7 +63,7 @@ export const VideoChatMessage = ({ isPlaying }) => {
           <span>{t("services.video.justNow")}</span>
         )}
       </div>
-      <ChatBubbleWing className="absolute right-full bottom-0 -scale-x-100" pathClassName="fill-n-6" />
+      <ChatBubbleWing className="absolute right-full bottom-0 -scale-x-100" pathClassName="bg-black" />
     </div>
   );
 };

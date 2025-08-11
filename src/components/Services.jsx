@@ -91,7 +91,7 @@ const Services = () => {
               <PhotoChatMessage />
             </div>
 
-            <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
+            <div className="p-4 bg-black rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="h4 mb-4">{t("services.card3.title")}</h4>
                 <p className="body-2 mb-[2rem] text-n-3">{t("services.card3.text")}</p>
@@ -102,8 +102,8 @@ const Services = () => {
                       key={i}
                       className={`flex items-center justify-center rounded-2xl ${
                         i === 2
-                          ? "w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]"
-                          : "flex w-10 h-10 bg-n-6 md:w-15 md:h-15"
+                          ? "w-[3rem] h-[3rem] p-0.25 bg-black md:w-[4.5rem] md:h-[4.5rem]"
+                          : "flex w-10 h-10 bg-n-7 md:w-15 md:h-15"
                       }`}
                     >
                       <div
