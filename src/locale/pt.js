@@ -1,11 +1,11 @@
 export default {
   hero: {
-    title: "Nós criamos software sem drama",
-    subtitle: "O tempo para quando o fluxo funciona. Libere sua jornada da rotina.",
+    title: "Seu Progresso no Piloto Automático",
+    subtitle: "Deixe seus fluxos cuidarem do trabalho enquanto você foca no que realmente importa.",
   },
   benefits: {
     heading: {
-      question: "Quais gargalos estão drenando sua produtividade?",
+      question: "Quais gargalos estão travando sua produtividade?",
       answer: "Nós os eliminamos.",
     },
     items: {
@@ -14,12 +14,12 @@ export default {
         text: "Insights instantâneos. Fluxos de trabalho otimizados. Mais tempo para inovar.",
       },
       1: {
-        title: "Otimize Seu Fluxo de Trabalho",
+        title: "Otimize Seus Processos",
         text: "Transforme tarefas repetitivas em processos automatizados e inteligentes, prontos para escalar.",
       },
       2: {
         title: "Sistemas Integrados, Operações Unificadas",
-        text: "Funcione sem interrupções com sistemas que se comunicam perfeitamente.",
+        text: "Opere sem interrupções com sistemas que se comunicam perfeitamente.",
       },
       3: {
         title: "Automatize com Inteligência",
@@ -38,9 +38,9 @@ export default {
   collab: {
     heading: {
       leading: "Gestão inteligente para um",
-      highlight: "futuro mais inteligente.",
+      highlight: "futuro sem limites.",
     },
-    text: "Melhore a performance otimizando tarefas, aplicando padrões e automatizando a conformidade.",
+    text: "Aprimore seus resultados otimizando tarefas, aplicando padrões e automatizando a conformidade.",
     items: {
       0: { title: "Integração de Sistemas", text: "Conecte seus dados em todas as plataformas." },
       1: { title: "Fluxos Consistentes", text: "Processos repetíveis, resultados previsíveis." },
@@ -50,22 +50,22 @@ export default {
   services: {
     heading: {
       leading: "Velocidade e agilidade em",
-      highlight: "toda operação!",
+      highlight: "toda operação.",
     },
     text: "Unifique aplicações, padronize tarefas e cresça sem limites.",
     card1: {
       title: "Automação. Monitoramento. Escala.",
-      text: "É a sua hora de acelerar processos e destravar resultados!",
+      text: "É a sua hora de acelerar processos e destravar resultados.",
     },
     card2: {
-      title: "Produtividade no piloto automático",
-      text: "Agende tarefas para rodarem sozinhas e acompanhe os ganhos.",
+      title: "Produtividade Automática",
+      text: "Agende tarefas para rodar sozinhas e acompanhe os ganhos.",
     },
     card3: {
-      title: "Sistemas integrados",
-      text: "Os motores mais rápidos para conectar processos e plataformas. O que você vai criar?",
+      title: "Sistemas Integrados",
+      text: "A forma mais rápida de conectar processos e plataformas. O que você vai criar?",
     },
-    list: ["Gatilhos inteligentes", "Dashboards 24/7", "Escala imediata"],
+    list: ["Gatilhos Inteligentes", "Dashboards 24/7", "Escala Imediata"],
     ui: {
       gradientAlt: "Gradiente",
     },
@@ -75,7 +75,7 @@ export default {
         "Otimizar este fluxo imediatamente.",
         "Orquestrar backups contínuos.",
         "Automatizar onboarding de usuários.",
-        "Marcar recursos para custeio.",
+        "Controle de custos.",
       ],
     },
     video: {
@@ -95,23 +95,23 @@ export default {
   },
   email: {
     buttonTooltip: "Solicitar documentação",
-    title: "Documentação AI",
-    subtitle: "Geração em tempo real",
+    title: "Documentação Inteligente",
+    subtitle: "Avaliação grátis em tempo real",
     closeModal: "Fechar modal",
     emailLabel: "Email para recebimento",
     emailPlaceholder: "seu@email.com",
     emailInvalid: "Email inválido",
     emailValid: "Email válido",
-    emailHint: "Receberá a documentação personalizada",
-    descriptionLabel: "O que documentar?",
-    descriptionPlaceholder: "Ex: API de pagamentos, dashboard admin, fluxo de login...",
+    emailHint: "Você receberá a documentação personalizada",
+    descriptionLabel: "Que rotina quer melhorar?",
+    descriptionPlaceholder: "Ex: Onboarding de usuários, aprovação de cadastros...",
     descriptionHint: "Seja específico para melhores resultados",
     submitting: "Processando...",
-    submitButton: "Gerar Documentação",
+    submitButton: "Solicitar Documentação",
     charCount: "{count}/{max}",
-    toastSuccess: "Solicitação enviada! Confira seu e-mail!",
+    toastSuccess: "Solicitação enviada. Confira seu e-mail!",
     toastError: "Falha inesperada. Tente novamente.",
     toastInvalidForm: "Preencha todos os campos.",
-    nudge: "Clique aqui",
+    nudge: "Nossa IA irá revisar seu caso",
   },
 };

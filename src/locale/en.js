@@ -1,11 +1,11 @@
 export default {
   hero: {
-    title: "We design drama-free software",
-    subtitle: "Clocks stop ticking when workflows click. Free your roadmap from routine.",
+    title: "Your Progress on Autopilot",
+    subtitle: "Let your workflows run themselves while you focus on what matters most.",
   },
   benefits: {
     heading: {
-      question: "What bottlenecks are draining your productivity?",
+      question: "What bottlenecks are holding back your productivity?",
       answer: "We eliminate them.",
     },
     items: {
@@ -15,7 +15,7 @@ export default {
       },
       1: {
         title: "Optimize Your Workflow",
-        text: "Transform repetitive tasks into smart automated processes, designed for scale.",
+        text: "Turn repetitive tasks into smart, scalable automated processes.",
       },
       2: {
         title: "Integrated Systems, Unified Operations",
@@ -23,11 +23,11 @@ export default {
       },
       3: {
         title: "Automate with Intelligence",
-        text: "AI-driven precision that evolves continuously with your business.",
+        text: "AI-powered precision that evolves with your business.",
       },
       4: {
         title: "Full Visibility, Total Control",
-        text: "Comprehensive monitoring for reliable, secure operations.",
+        text: "End-to-end monitoring for secure and reliable operations.",
       },
       5: {
         title: "No Friction. Just Flow.",
@@ -40,32 +40,32 @@ export default {
       leading: "Smart Management for a Smarter",
       highlight: "Future.",
     },
-    text: "Improve performance by optimizing tasks, enforcing standards, and automating compliance.",
+    text: "Boost performance by optimizing tasks, enforcing standards, and automating compliance.",
     items: {
-      0: { title: "System Integration", text: "Connect your data across all platforms." },
-      1: { title: "Consistent Workflows", text: "Repeatable processes, predictable outcomes." },
+      0: { title: "System Integration", text: "Connect and unify your data across all platforms." },
+      1: { title: "Consistent Workflows", text: "Repeatable processes. Predictable outcomes." },
       2: { title: "Automated Compliance", text: "Meet and exceed standards automatically." },
     },
   },
   services: {
     heading: {
       leading: "Speed and Agility in",
-      highlight: "Every Operation!",
+      highlight: "Every Operation.",
     },
     text: "Unify applications, standardize tasks, and grow without limits.",
     card1: {
       title: "Automation. Monitoring. Scaling.",
-      text: "It's your time to speed up processes and unlock results!",
+      text: "It's time to accelerate processes and unlock results.",
     },
     card2: {
       title: "Productivity on Autopilot",
-      text: "Set tasks to run themselves and track the gains.",
+      text: "Let tasks run automatically and track the results.",
     },
     card3: {
       title: "Integrated Systems",
-      text: "The fastest engines for connecting processes and platforms. What will you create?",
+      text: "The fastest way to connect processes and platforms. What will you build?",
     },
-    list: ["Intelligent Triggers", "24/7 Dashboards", "Immediate Scale"],
+    list: ["Intelligent Triggers", "24/7 Dashboards", "Instant Scalability"],
     ui: {
       gradientAlt: "Gradient",
     },
@@ -79,9 +79,9 @@ export default {
       ],
     },
     video: {
-      playing: "Synchronizing Data...",
-      done: "Data Sync Complete!",
-      justNow: "just now",
+      playing: "Synchronizing data...",
+      done: "Data sync complete!",
+      justNow: "Just now",
       brandAlt: "Dotmind Labs",
       loadingAlt: "Loading",
     },
@@ -95,23 +95,23 @@ export default {
   },
   email: {
     buttonTooltip: "Request documentation",
-    title: "AI Documentation",
-    subtitle: "Real-time generation",
+    title: "Intelligent Documentation",
+    subtitle: "Free real-time avaliation",
     closeModal: "Close modal",
-    emailLabel: "Email to receive",
+    emailLabel: "Email for delivery",
     emailPlaceholder: "you@example.com",
     emailInvalid: "Invalid email",
     emailValid: "Valid email",
-    emailHint: "You'll receive personalized documentation",
-    descriptionLabel: "What should we document?",
-    descriptionPlaceholder: "e.g., Payments API, admin dashboard, login flow...",
+    emailHint: "You will receive personalized documentation",
+    descriptionLabel: "Which routine do you want to improve?",
+    descriptionPlaceholder: "e.g., User onboarding, registration approvals...",
     descriptionHint: "Be specific for better results",
     submitting: "Processing...",
-    submitButton: "Generate Documentation",
+    submitButton: "Request Documentation",
     charCount: "{count}/{max}",
     toastSuccess: "Request sent! Check your inbox.",
     toastError: "Unexpected failure. Please try again.",
     toastInvalidForm: "Please fill in all fields.",
-    nudge: "Click here",
+    nudge: "Our AI will review your case",
   },
 };
