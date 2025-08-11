@@ -1,7 +1,7 @@
 export default {
   hero: {
     title: "Your Progress on Autopilot",
-    subtitle: "Let your workflows run themselves while you focus on what matters most.",
+    subtitle: "Let processes run themselves while you focus on the essential.",
   },
   benefits: {
     heading: {

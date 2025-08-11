@@ -1,7 +1,7 @@
 export default {
   hero: {
     title: "Seu Progresso no Piloto Automático",
-    subtitle: "Deixe seus fluxos cuidarem do trabalho enquanto você foca no que realmente importa.",
+    subtitle: "Deixe os processos rodarem sozinhos enquanto você foca no essencial.",
   },
   benefits: {
     heading: {
