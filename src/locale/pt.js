@@ -112,5 +112,6 @@ export default {
     toastSuccess: "Solicitação enviada! Confira seu e-mail!",
     toastError: "Falha inesperada. Tente novamente.",
     toastInvalidForm: "Preencha todos os campos.",
+    nudge: "Clique aqui",
   },
 };

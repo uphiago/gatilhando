@@ -1,4 +1,5 @@
-import { Mail, MessageCircle, Send, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Mail, MessageCircle, Send, X, ArrowDownRight } from "lucide-react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -24,8 +25,50 @@ export default function EmailRequestPopup() {
   const isValidEmail = !!email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const isInvalidEmail = emailTouched && email && email.length > 0 && !isValidEmail;
 
+  // 👇 Nudge (balão + seta) que pisca de tempos em tempos
+// 👇 Nudge (balão + seta) que pisca de tempos em tempos
+const [showNudge, setShowNudge] = useState(true);
+useEffect(() => {
+  if (isOpen) {
+    setShowNudge(false);
+    return;
+  }
+
+  /** @type {ReturnType<typeof setTimeout> | null} */
+  let hideTimeout = null;
+
+  const cycle = () => {
+    setShowNudge(true);
+    hideTimeout = setTimeout(() => setShowNudge(false), 3500); // visível por 3.5s
+  };
+
+  cycle();
+  const loop = setInterval(cycle, 12000); // reaparece a cada 12s
+
+  return () => {
+    clearInterval(loop);
+    if (hideTimeout) clearTimeout(hideTimeout);
+  };
+}, [isOpen]);
+
+
   return (
     <>
+      {/* Nudge apenas quando o botão está fechado */}
+      {!isOpen && (
+        <div
+          className={`pointer-events-none fixed bottom-16 right-15 z-[60] flex items-center gap-2 transition-all duration-700 ${
+            showNudge ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+          }`}
+          aria-hidden="true"
+        >
+          <div className="bg-white text-black text-xs font-medium px-3 py-2 rounded-xl shadow-xl border border-black/10">
+            {t("email.nudge")}
+          </div>
+          <ArrowDownRight className="w-5 h-5 text-white drop-shadow-[0_0_6px_rgba(255,255,255,0.35)] animate-bounce" />
+        </div>
+      )}
+
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
@@ -88,8 +131,8 @@ export default function EmailRequestPopup() {
                     isInvalidEmail
                       ? "border-red-400 focus:ring-red-400/50"
                       : isValidEmail
-                        ? "border-white focus:ring-white/50"
-                        : "border-white/20 focus:ring-white/30"
+                      ? "border-white focus:ring-white/50"
+                      : "border-white/20 focus:ring-white/30"
                   }`}
                   disabled={isSubmitting}
                   required
