@@ -44,22 +44,29 @@ const Header = () => {
         whileHover={{ opacity: 1, scale: 1.08 }}
         transition={{ type: "spring", stiffness: 150, damping: 26 }}
       />
-      <motion.button
-        onClick={toggleLanguage}
-        aria-label={language === "en-US" ? "Switch to Portuguese" : "Mudar para Inglês"}
-        className="fixed top-4 right-4 sm:top-7 sm:right-15 z-50 w-8 h-8 sm:w-9 sm:h-9 overflow-hidden bg-transparent flex items-center justify-center p-0"
+      <motion.div
+        className="fixed top-4 right-4 sm:top-7 sm:right-15 z-50 flex gap-1 bg-black/10 rounded-full p-1"
         style={{ opacity, y }}
         onHoverStart={() => hoverFlag.set(1)}
         onHoverEnd={() => hoverFlag.set(0)}
-        whileHover={{ opacity: 1, scale: 1.05 }}
-        transition={{ type: "spring", stiffness: 150, damping: 26 }}
       >
-        {language === "en-US" ? (
-          <BR title="Português" className="w-full h-full" />
-        ) : (
+        <button
+          onClick={() => language !== "en-US" && toggleLanguage()}
+          className={`w-5 h-5 rounded-sm overflow-hidden transition-all ${
+            language === "en-US" ? "opacity-100 scale-110" : "opacity-50 hover:opacity-80"
+          }`}
+        >
           <US title="English" className="w-full h-full" />
-        )}
-      </motion.button>
+        </button>
+        <button
+          onClick={() => language !== "pt-BR" && toggleLanguage()}
+          className={`w-5 h-5 rounded-sm overflow-hidden transition-all ${
+            language === "pt-BR" ? "opacity-100 scale-110" : "opacity-50 hover:opacity-80"
+          }`}
+        >
+          <BR title="Português" className="w-full h-full" />
+        </button>
+      </motion.div>
     </>
   );
 };
