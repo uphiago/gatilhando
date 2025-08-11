@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { ScrollParallax } from "react-just-parallax";
 
+import { useTranslation } from "../locale/Translation";
 import Section from "./Section";
 import { BottomLine } from "./design/Hero";
 import RippleGrid from "./design/RippleGrid";
 
 const Hero = () => {
+  const { t } = useTranslation();
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -24,7 +26,7 @@ const Hero = () => {
             zIndex: 999,
             position: "relative",
             height: "500px",
-            transform: "translateY(200px)",
+            transform: "translateY(250px)",
             overflow: "hidden",
           }}
         >
@@ -45,10 +47,10 @@ const Hero = () => {
             style={{ opacity, filter: `blur(${blur}px)` }}
           >
             <p className="body-1 max-w-4xl mx-auto mt-20 mb-6 #ffffff lg:mb-8 text-4xl lg:text-5xl font-semibold">
-              We Design Drama Free Software
+              {t("hero.title")}
             </p>
             <p className="body-1 max-w-4xl mx-auto mb-6 #ffffff lg:mb-8 text-lg md:text-xl lg:text-2xl">
-              Clocks stop ticking when workflows click. Free your roadmap from routine.
+              {t("hero.subtitle")}
             </p>
           </div>
         </ScrollParallax>

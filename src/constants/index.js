@@ -15,8 +15,7 @@ import {
   chromecast,
   disc02,
   discord,
-  docker, // discordBlack,
-  // facebook,
+  docker,
   file02,
   google,
   homeSmile,
@@ -40,38 +39,6 @@ import {
   yourlogo,
   yourlogo1,
 } from "../assets";
-
-// import { links } from "../config";
-
-// export const navigation = [
-// {
-//   id: "0",
-//   title: "Nossa proposta",
-//   url: "#features",
-// },
-// {
-//   id: "1",
-//   title: "Negocios",
-//   url: "#how-to-use",
-// },
-// {
-//   id: "2",
-//   title: "How to use",
-//   url: "#how-to-use",
-// },
-// {
-//   id: "3",
-//   title: "Roadmap",
-//   url: "#roadmap",
-// },
-// {
-//   id: "4",
-//   title: "Source Code",
-//   url: links.sourceCode,
-//   onlyMobile: true,
-//   external: true,
-// },
-// ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
@@ -142,7 +109,7 @@ export const collabContent = [
 export const collabApps = [
   {
     id: "0",
-    title: "Cloud Services",
+    title: "Cloud",
     icon: aws,
     width: 26,
     height: 36,
@@ -223,18 +190,6 @@ export const pricing = [
     ],
     premium: true,
   },
-  // {
-  //   id: "2",
-  //   title: "Enterprise",
-  //   description: "Custom AI chatbot, advanced analytics, dedicated account",
-  //   price: null,
-  //   features: [
-  //     "An AI chatbot that can understand your queries",
-  //     "Personalized recommendations based on your preferences",
-  //     "Ability to explore the app and its features without any cost",
-  //   ],
-  //   premium: false,
-  // },
 ];
 
 export const benefits = [

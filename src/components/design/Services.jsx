@@ -3,8 +3,10 @@ import Typewriter from "typewriter-effect";
 
 import { dotmindlabsSymbolWhite, gradient, loading, pause, play } from "../../assets";
 import ChatBubbleWing from "../../assets/svg/ChatBubbleWing";
+import { useTranslation } from "../../locale/Translation";
 
 export const Gradient = () => {
+  const { t } = useTranslation();
   return (
     <div className="absolute top-0 -left-[10rem] w-[56.625rem] h-[56.625rem] opacity-50 mix-blend-color-dodge pointer-events-none">
       <img
@@ -12,24 +14,19 @@ export const Gradient = () => {
         src={gradient}
         width={1417}
         height={1417}
-        alt="Gradient"
+        alt={t("services.ui.gradientAlt")}
       />
     </div>
   );
 };
 
 export const PhotoChatMessage = () => {
+  const { t } = useTranslation();
   return (
     <div className="absolute top-8 right-8 w-[18rem] h-[6rem] py-6 px-8 bg-black rounded-t-xl rounded-bl-xl font-code text-base lg:top-16 lg:right-[8.75rem]">
       <Typewriter
         options={{
-          strings: [
-            "Connect all systems now.",
-            "Optimize this workflow immediately.",
-            "Orchestrate continuous backups.",
-            "Automate user onboarding.",
-            "Tag resources for cost tracking.",
-          ],
+          strings: t("services.photo.messages"),
           autoStart: true,
           loop: true,
         }}
@@ -40,11 +37,12 @@ export const PhotoChatMessage = () => {
 };
 
 export const VideoChatMessage = ({ isPlaying }) => {
+  const { t } = useTranslation();
   return (
     <div className="absolute top-8 left-[3.125rem] w-full max-w-[14rem] pt-2.5 pr-2.5 pb-7 pl-5 bg-n-6 rounded-t-xl rounded-br-xl font-code text-base md:max-w-[17.5rem]">
       <Typewriter
         options={{
-          strings: isPlaying ? ["Synchronizing Data..."] : ["Data Sync Complete!"],
+          strings: isPlaying ? [t("services.video.playing")] : [t("services.video.done")],
           cursor: isPlaying ? "|" : "",
           autoStart: true,
           deleteSpeed: isPlaying ? "natural" : Infinity,
@@ -52,13 +50,17 @@ export const VideoChatMessage = ({ isPlaying }) => {
         }}
       />
       <div className="absolute left-5 -bottom-[1.125rem] flex items-center justify-center w-[2.25rem] h-[2.25rem] bg-black rounded-[0.75rem]">
-        <img src={dotmindlabsSymbolWhite} width={26} height={26} alt="Brainwave" />
+        <img src={dotmindlabsSymbolWhite} width={26} height={26} alt={t("services.video.brandAlt")} />
       </div>
       <div className="tagline absolute right-2.5 bottom-1 text-[0.625rem] text-n-3 uppercase">
         {isPlaying ? (
-          <img src={loading} alt="Loading" className="w-4 h-4 animate-spin pointer-events-none select-none" />
+          <img
+            src={loading}
+            alt={t("services.video.loadingAlt")}
+            className="w-4 h-4 animate-spin pointer-events-none select-none"
+          />
         ) : (
-          <span>just now</span>
+          <span>{t("services.video.justNow")}</span>
         )}
       </div>
       <ChatBubbleWing className="absolute right-full bottom-0 -scale-x-100" pathClassName="fill-n-6" />
@@ -67,6 +69,7 @@ export const VideoChatMessage = ({ isPlaying }) => {
 };
 
 export const VideoBar = ({ isPlaying, setIsPlaying }) => {
+  const { t } = useTranslation();
   const [counter, setCounter] = useState(0);
   const progressRef = useRef(null);
 
@@ -88,7 +91,7 @@ export const VideoBar = ({ isPlaying, setIsPlaying }) => {
         src={isPlaying ? pause : play}
         width={24}
         height={24}
-        alt="Play"
+        alt={isPlaying ? t("services.controls.pauseAlt") : t("services.controls.playAlt")}
         className="object-contain mr-3 cursor-pointer"
         onClick={() => setIsPlaying(!isPlaying)}
       />

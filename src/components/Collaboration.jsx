@@ -3,24 +3,23 @@ import Lottie from "lottie-react";
 import { useRef } from "react";
 
 import { check, dotmindlabsSymbol } from "../assets";
-import { collabApps, collabContent, collabText } from "../constants";
+import { collabApps, collabContent } from "../constants";
+import { useTranslation } from "../locale/Translation";
 import Section from "./Section";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
 import { BottomLine } from "./design/Hero";
 import TooltipIcon from "./design/Tooltips";
-import { SquigglyTextHighlight } from "./design/Underline";
 
 const Collaboration = () => {
+  const { t } = useTranslation();
+
   const lottieRefs = useRef([]);
   return (
     <Section crosses>
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">
-            Smart Management for a Smarter{" "}
-            <SquigglyTextHighlight delay={1000} color="#ffffff">
-              Future.
-            </SquigglyTextHighlight>
+            {t("collab.heading.leading")} {t("collab.heading.highlight")}
           </h2>
           <ul className="max-w-[22rem] mb-10 md:mb-14">
             {collabContent.map((item, index) => {
@@ -44,9 +43,9 @@ const Collaboration = () => {
                         lottieRefs.current[index].current?.play();
                       }}
                     />
-                    <h6 className="body-2 ml-5">{item.title}</h6>
+                    <h6 className="body-2 ml-5">{t(`collab.items.${item.id}.title`)}</h6>
                   </div>
-                  {item.text && <p className="body-2 mt-3 text-n-4">{item.text}</p>}
+                  {item.text && <p className="body-2 mt-3 text-n-4">{t(`collab.items.${item.id}.text`)}</p>}
                 </li>
               );
             })}
@@ -54,7 +53,7 @@ const Collaboration = () => {
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
-          <p className="body-2 mb-4 text-n-4 md:mb-16 lg:mb-32 lg:w-[32rem] lg:mx-auto">{collabText}</p>
+          <p className="body-2 mb-4 text-n-4 md:mb-16 lg:mb-32 lg:w-[32rem] lg:mx-auto">{t("collab.text")}</p>
 
           <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale-75 md:scale-100">
             <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">

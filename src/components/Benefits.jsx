@@ -3,6 +3,7 @@ import Lottie from "lottie-react";
 import { useState } from "react";
 
 import { benefits } from "../constants";
+import { useTranslation } from "../locale/Translation";
 import Heading from "./Heading";
 import Section from "./Section";
 import { SquigglyTextHighlight } from "./design/Underline";
@@ -10,6 +11,7 @@ import { SquigglyTextHighlight } from "./design/Underline";
 const Benefits = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [playingAnimations, setPlayingAnimations] = useState(new Set());
+  const { t } = useTranslation();
 
   const handleMouseEnter = (idx) => {
     setHoveredIndex(idx);
@@ -27,9 +29,9 @@ const Benefits = () => {
           className="md:max-w-md lg:max-w-4xl text-center lg:mt-24"
           title={
             <>
-              What bottlenecks are draining your productivity?{" "}
+              {t("benefits.heading.question")}{" "}
               <SquigglyTextHighlight delay={1000} color="#ffffff">
-                We eliminate them.
+                {t("benefits.heading.answer")}
               </SquigglyTextHighlight>
             </>
           }
@@ -59,9 +61,9 @@ const Benefits = () => {
 
                 <div className="group/card rounded-3xl w-full relative overflow-hidden bg-transparent flex items-center justify-center min-h-[22rem] border border-white/[0.2] group-hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] transition-all duration-250 z-20">
                   <div className="relative z-10 flex flex-col min-h-[22rem] p-[2.4rem] w-full">
-                    <h5 className="text-white mb-4 text-xl font-semibold">{benefit.title}</h5>
+                    <h5 className="text-white mb-4 text-xl font-semibold">{t(`benefits.items.${benefit.id}.title`)}</h5>
                     <p className="body-3 mb-6 text-n-3 transition-colors duration-300 group-hover:text-white/90">
-                      {benefit.text}
+                      {t(`benefits.items.${benefit.id}.text`)}
                     </p>
 
                     <motion.div className="pointer-events-auto mt-auto w-12 h-12 rounded-xl bg-white backdrop-blur-sm border border-white/20 flex items-center justify-center transition-all duration-300 group-hover:bg-white/100 group-hover:shadow-lg group-hover:scale-110">

@@ -3,16 +3,17 @@ import { useRef, useState } from "react";
 
 import { check, service1, service2, service3 } from "../assets";
 import { brainwaveServices, brainwaveServicesIcons } from "../constants";
+import { useTranslation } from "../locale/Translation";
 import Generating from "./Generating";
 import Heading from "./Heading";
 import Section from "./Section";
-import { BottomLine } from "./design/Hero";
 import { Gradient, PhotoChatMessage, VideoBar, VideoChatMessage } from "./design/Services";
 import { SquigglyTextHighlight } from "./design/Underline";
 
 const Services = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const lottieRefs = useRef(brainwaveServices.map(() => ({ current: null })));
+  const { t } = useTranslation();
 
   return (
     <Section id="how-to-use">
@@ -20,13 +21,13 @@ const Services = () => {
         <Heading
           title={
             <>
-              Speed and Agility in{" "}
+              {t("services.heading.leading")}{" "}
               <SquigglyTextHighlight delay={1000} color="#ffffff">
-                Every Operation!
+                {t("services.heading.highlight")}
               </SquigglyTextHighlight>
             </>
           }
-          text="Unify applications, standardize tasks, and grow without limits."
+          text={t("services.text")}
         />
 
         <div className="relative">
@@ -43,12 +44,11 @@ const Services = () => {
             </div>
 
             <div className="relative z-1 max-w-[17rem] ml-auto">
-              <h4 className="h4 mb-4">Automation. Monitoring. Scaling.</h4>
-              <p className="body-2 mb-[3rem] text-n-3">Its your time to speed up processes and unlock results!</p>
+              <h4 className="h4 mb-4">{t("services.card1.title")}</h4>
+              <p className="body-2 mb-[3rem] text-n-3">{t("services.card1.text")}</p>
               <ul className="body-2">
                 {brainwaveServices.map((item, i) => (
                   <li key={i} className="flex items-start py-4 border-t border-n-6">
-                    {/* <img width={24} height={24} src={check} alt="check" className="pointer-events-none select-none" /> */}
                     <Lottie
                       lottieRef={lottieRefs.current[i]}
                       animationData={check}
@@ -61,7 +61,7 @@ const Services = () => {
                         lottieRefs.current[i].current?.play();
                       }}
                     />
-                    <p className="ml-4">{item}</p>
+                    <p className="ml-4">{t(`services.list.${i}`)}</p>
                   </li>
                 ))}
               </ul>
@@ -84,8 +84,8 @@ const Services = () => {
               </div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                <h4 className="h4 mb-4">Productivity on Autopilot</h4>
-                <p className="body-2 mb-[3rem] text-n-3">Set tasks to run themselves and track the gains.</p>
+                <h4 className="h4 mb-4">{t("services.card2.title")}</h4>
+                <p className="body-2 mb-[3rem] text-n-3">{t("services.card2.text")}</p>
               </div>
 
               <PhotoChatMessage />
@@ -93,10 +93,8 @@ const Services = () => {
 
             <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
-                <h4 className="h4 mb-4">Integrated Systems</h4>
-                <p className="body-2 mb-[2rem] text-n-3">
-                  The fastest engines for connecting processes and platforms. What will you create?
-                </p>
+                <h4 className="h4 mb-4">{t("services.card3.title")}</h4>
+                <p className="body-2 mb-[2rem] text-n-3">{t("services.card3.text")}</p>
 
                 <ul className="flex items-center justify-between">
                   {brainwaveServicesIcons.map((icon, i) => (

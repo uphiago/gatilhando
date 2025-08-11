@@ -1,7 +1,8 @@
-import { ToastContainer } from 'react-toastify';
-import { Send, FileText, X, MessageCircle } from 'lucide-react';
-import 'react-toastify/dist/ReactToastify.css';
-import { useEmailRequest } from '../config/email';
+import { FileText, MessageCircle, Send, X } from "lucide-react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import { useEmailRequest } from "../config/email";
 
 export default function EmailRequestPopup() {
   const {
@@ -37,11 +38,8 @@ export default function EmailRequestPopup() {
 
       {isOpen && (
         <>
-          <div 
-            className="fixed inset-0 z-40"
-            onClick={() => setIsOpen(false)}
-          />
-          <div 
+          <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
+          <div
             className="fixed bottom-6 right-6 w-80 bg-black/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/10 z-50 animate-in slide-in-from-bottom-2 duration-300"
             role="dialog"
             aria-modal="true"
@@ -53,15 +51,17 @@ export default function EmailRequestPopup() {
                   <FileText className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 id="modal-title" className="font-semibold text-white text-sm">Documentação AI</h3>
+                  <h3 id="modal-title" className="font-semibold text-white text-sm">
+                    Documentação AI
+                  </h3>
                   <p className="text-xs text-gray-400 flex items-center gap-1">
                     <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
                     Geração em tempo real
                   </p>
                 </div>
               </div>
-              <button 
-                onClick={() => setIsOpen(false)} 
+              <button
+                onClick={() => setIsOpen(false)}
                 className="p-1.5 hover:bg-white/10 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white/20"
                 aria-label="Fechar modal"
               >
@@ -83,22 +83,21 @@ export default function EmailRequestPopup() {
                   placeholder="seu@email.com"
                   className={`w-full px-4 py-3 text-sm bg-white/5 border rounded-xl transition-all text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:border-transparent ${
                     isInvalidEmail
-                      ? 'border-red-400 focus:ring-red-400/50' 
+                      ? "border-red-400 focus:ring-red-400/50"
                       : isValidEmail
-                      ? 'border-white focus:ring-white/50'
-                      : 'border-white/20 focus:ring-white/30'
+                        ? "border-white focus:ring-white/50"
+                        : "border-white/20 focus:ring-white/30"
                   }`}
                   disabled={isSubmitting}
                   required
                   aria-describedby="email-hint"
                 />
-                <span id="email-hint" className={`text-xs flex items-center gap-1 ${
-                  isInvalidEmail
-                    ? 'text-red-400'
-                    : isValidEmail
-                    ? 'text-white'
-                    : 'text-gray-400'
-                }`}>
+                <span
+                  id="email-hint"
+                  className={`text-xs flex items-center gap-1 ${
+                    isInvalidEmail ? "text-red-400" : isValidEmail ? "text-white" : "text-gray-400"
+                  }`}
+                >
                   {isInvalidEmail ? (
                     <span>❌ Email inválido</span>
                   ) : isValidEmail ? (
@@ -108,7 +107,7 @@ export default function EmailRequestPopup() {
                   )}
                 </span>
               </div>
-              
+
               <div className="space-y-2">
                 <label htmlFor="description-input" className="block text-sm font-medium text-white">
                   O que documentar?
@@ -129,12 +128,10 @@ export default function EmailRequestPopup() {
                   <span id="description-hint" className="text-xs text-gray-400">
                     Seja específico para melhores resultados
                   </span>
-                  <span className="text-xs text-gray-400">
-                    {description.length}/300
-                  </span>
+                  <span className="text-xs text-gray-400">{description.length}/300</span>
                 </div>
               </div>
-              
+
               <button
                 onClick={handleSubmit}
                 disabled={isSubmitting || !isValidEmail || !description}
@@ -163,7 +160,7 @@ export default function EmailRequestPopup() {
         hideProgressBar
         theme="dark"
         toastClassName="text-sm rounded-lg shadow-lg border mb-16"
-        style={{ marginBottom: '100px' }}
+        style={{ marginBottom: "100px" }}
       />
     </>
   );
