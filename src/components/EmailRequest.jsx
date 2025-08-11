@@ -1,5 +1,5 @@
+import { ArrowDownRight, Mail, MessageCircle, Send, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Mail, MessageCircle, Send, X, ArrowDownRight } from "lucide-react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -25,36 +25,32 @@ export default function EmailRequestPopup() {
   const isValidEmail = !!email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const isInvalidEmail = emailTouched && email && email.length > 0 && !isValidEmail;
 
-  // 👇 Nudge (balão + seta) que pisca de tempos em tempos
-// 👇 Nudge (balão + seta) que pisca de tempos em tempos
-const [showNudge, setShowNudge] = useState(true);
-useEffect(() => {
-  if (isOpen) {
-    setShowNudge(false);
-    return;
-  }
+  const [showNudge, setShowNudge] = useState(true);
+  useEffect(() => {
+    if (isOpen) {
+      setShowNudge(false);
+      return;
+    }
 
-  /** @type {ReturnType<typeof setTimeout> | null} */
-  let hideTimeout = null;
+    /** @type {ReturnType<typeof setTimeout> | null} */
+    let hideTimeout = null;
 
-  const cycle = () => {
-    setShowNudge(true);
-    hideTimeout = setTimeout(() => setShowNudge(false), 3500); // visível por 3.5s
-  };
+    const cycle = () => {
+      setShowNudge(true);
+      hideTimeout = setTimeout(() => setShowNudge(false), 3500);
+    };
 
-  cycle();
-  const loop = setInterval(cycle, 12000); // reaparece a cada 12s
+    cycle();
+    const loop = setInterval(cycle, 12000);
 
-  return () => {
-    clearInterval(loop);
-    if (hideTimeout) clearTimeout(hideTimeout);
-  };
-}, [isOpen]);
-
+    return () => {
+      clearInterval(loop);
+      if (hideTimeout) clearTimeout(hideTimeout);
+    };
+  }, [isOpen]);
 
   return (
     <>
-      {/* Nudge apenas quando o botão está fechado */}
       {!isOpen && (
         <div
           className={`pointer-events-none fixed bottom-16 right-15 z-[60] flex items-center gap-2 transition-all duration-700 ${
@@ -131,8 +127,8 @@ useEffect(() => {
                     isInvalidEmail
                       ? "border-red-400 focus:ring-red-400/50"
                       : isValidEmail
-                      ? "border-white focus:ring-white/50"
-                      : "border-white/20 focus:ring-white/30"
+                        ? "border-white focus:ring-white/50"
+                        : "border-white/20 focus:ring-white/30"
                   }`}
                   disabled={isSubmitting}
                   required
