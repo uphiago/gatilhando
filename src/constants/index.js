@@ -12,14 +12,13 @@ import {
   benefitImage4,
   benefitImage5,
   benefitImage6,
-  chromecast,
-  disc02,
+  database,
+  rating,
   discord,
   docker,
   file02,
   google,
   homeSmile,
-  instagram,
   n8n,
   notification1,
   notification2,
@@ -28,14 +27,14 @@ import {
   ollama,
   openai,
   plusSquare,
-  recording01,
-  recording03,
+  brain,
+  experiment,
   roadmap1,
   roadmap2,
   roadmap3,
   roadmap4,
   searchMd,
-  sliders04,
+  telemarketing,
   yourlogo,
   yourlogo1,
 } from "../assets";
@@ -46,9 +45,7 @@ export const notificationImages = [notification1, notification2, notification3];
 
 export const companyLogos = [yourlogo1, yourlogo, yourlogo, yourlogo, yourlogo];
 
-export const brainwaveServices = ["Intelligent Triggers", "24/7 Dashboards", "Immediate Scale"];
-
-export const brainwaveServicesIcons = [recording03, recording01, disc02, chromecast, sliders04];
+export const ServicesIcons = [experiment, brain, rating, database, telemarketing];
 
 export const roadmap = [
   {

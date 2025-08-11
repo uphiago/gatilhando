@@ -22,7 +22,6 @@ import benefitImage4 from "./benefits/square4.png";
 import benefitImage5 from "./benefits/square5.png";
 import benefitImage6 from "./benefits/square6.png";
 import check2 from "./check-02.svg";
-import chromecast from "./chrome-cast.svg";
 import aws from "./collaboration/aws.png";
 import curve1 from "./collaboration/curve-1.svg";
 import curve2 from "./collaboration/curve-2.svg";
@@ -33,13 +32,16 @@ import n8n from "./collaboration/n8n.png";
 import nvidia from "./collaboration/nvidia.png";
 import ollama from "./collaboration/ollama.png";
 import openai from "./collaboration/openai.png";
-import disc02 from "./disc-02.svg";
+  import database from "./database.svg";
+  import telemarketing from "./telemarketing.svg";
+  import rating from "./rating.svg";
+  import brain from "./brain.svg";
+  import experiment from "./experiment.svg";
 import file02 from "./file-02.svg";
 import gradient from "./gradient.png";
 import grid from "./grid.png";
 import curve from "./hero/curve.png";
 import heroBackground from "./hero/hero-background.jpg";
-// import performance from "./hero/performance.mp4";
 import robot from "./hero/robot.mp4";
 import homeSmile from "./home-smile.svg";
 import loading1 from "./loading-01.svg";
@@ -52,8 +54,6 @@ import play from "./play.svg";
 import plusSquare from "./plus-square.svg";
 import lines from "./pricing/lines.svg";
 import stars from "./pricing/stars.svg";
-import recording01 from "./recording-01.svg";
-import recording03 from "./recording-03.svg";
 import coins from "./roadmap/coins.png";
 import done from "./roadmap/done.svg";
 import hero from "./roadmap/hero.png";
@@ -66,7 +66,6 @@ import searchMd from "./search-md.svg";
 import service1 from "./services/service-1.png";
 import service2 from "./services/service-2.png";
 import service3 from "./services/service-3.png";
-import sliders04 from "./sliders-04.svg";
 import discordBlack from "./socials/discord.svg";
 import facebook from "./socials/facebook.svg";
 import instagram from "./socials/instagram.svg";
@@ -92,11 +91,11 @@ export {
   file02,
   searchMd,
   plusSquare,
-  recording03,
-  recording01,
-  disc02,
-  chromecast,
-  sliders04,
+  experiment,
+  brain,
+  rating,
+  database,
+  telemarketing,
   loading,
   background,
   curve,

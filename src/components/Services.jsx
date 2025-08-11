@@ -2,17 +2,17 @@ import Lottie from "lottie-react";
 import { useRef, useState } from "react";
 
 import { check, service1, service2, service3 } from "../assets";
-import { brainwaveServices, brainwaveServicesIcons } from "../constants";
+import { ServicesIcons } from "../constants";
 import { useTranslation } from "../locale/Translation";
 import Generating from "./Generating";
 import Heading from "./Heading";
 import Section from "./Section";
-import { Gradient, PhotoChatMessage, VideoBar, VideoChatMessage } from "./design/Services";
+import { PhotoChatMessage, VideoBar, VideoChatMessage } from "./design/Services";
 import { SquigglyTextHighlight } from "./design/Underline";
 
 const Services = () => {
   const [isPlaying, setIsPlaying] = useState(true);
-  const lottieRefs = useRef(brainwaveServices.map(() => ({ current: null })));
+  const lottieRefs = useRef(Array.from({ length: 3 }, () => ({ current: null })));
   const { t } = useTranslation();
 
   return (
@@ -46,25 +46,26 @@ const Services = () => {
             <div className="relative z-1 max-w-[17rem] ml-auto">
               <h4 className="h4 mb-4">{t("services.card1.title")}</h4>
               <p className="body-2 mb-[3rem] text-n-3">{t("services.card1.text")}</p>
-              <ul className="body-2">
-                {brainwaveServices.map((item, i) => (
-                  <li key={i} className="flex items-start py-4 border-t border-n-6">
-                    <Lottie
-                      lottieRef={lottieRefs.current[i]}
-                      animationData={check}
-                      autoplay={false}
-                      loop={false}
-                      speed={2}
-                      style={{ width: 24, height: 24 }}
-                      onMouseEnter={() => {
-                        lottieRefs.current[i].current?.stop();
-                        lottieRefs.current[i].current?.play();
-                      }}
-                    />
-                    <p className="ml-4">{t(`services.list.${i}`)}</p>
-                  </li>
-                ))}
-              </ul>
+<ul className="body-2">
+  {[...Array(3)].map((_, i) => (
+    <li key={i} className="flex items-start py-4 border-t border-n-6">
+      <Lottie
+        lottieRef={lottieRefs.current[i]}
+        animationData={check}
+        autoplay={false}
+        loop={false}
+        speed={2}
+        style={{ width: 24, height: 24 }}
+        onMouseEnter={() => {
+          lottieRefs.current[i].current?.stop();
+          lottieRefs.current[i].current?.play();
+        }}
+      />
+      <p className="ml-4">{t(`services.list.${i}`)}</p>
+    </li>
+  ))}
+</ul>
+
             </div>
 
             <Generating className="absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg:right-auto lg:bottom-8 lg:-translate-x-1/2" />
@@ -95,7 +96,7 @@ const Services = () => {
                 <p className="body-2 mb-[2rem] text-n-3">{t("services.card3.text")}</p>
 
                 <ul className="flex items-center justify-between">
-                  {brainwaveServicesIcons.map((icon, i) => (
+                  {ServicesIcons.map((icon, i) => (
                     <li
                       key={i}
                       className={`flex items-center justify-center rounded-2xl ${

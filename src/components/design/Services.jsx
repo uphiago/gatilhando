@@ -57,7 +57,7 @@ export const VideoChatMessage = ({ isPlaying }) => {
           <img
             src={loading}
             alt={t("services.video.loadingAlt")}
-            className="w-4 h-4 animate-spin pointer-events-none select-none"
+            className="w-4 h-4 animate-spin pointer-events-none select-none relative -top-1 -right-1"
           />
         ) : (
           <span>{t("services.video.justNow")}</span>
