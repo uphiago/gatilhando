@@ -1,29 +1,45 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { toast } from "react-toastify";
 
+import { useTranslation } from "../locale/Translation";
+
 export function useEmailRequest() {
+  const { t } = useTranslation();
+
   const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState("");
+  const [emailTouched, setEmailTouched] = useState(false);
   const [description, setDescription] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const collectMeta = () => ({
-    tz: Intl.DateTimeFormat().resolvedOptions().timeZone,
-    locale: navigator.language,
-    userAgent: navigator.userAgent,
-    viewport: { w: window.innerWidth, h: window.innerHeight },
-    page: window.location.href,
-    referrer: document.referrer || null,
-  });
+  const collectMeta = useCallback(() => {
+    if (typeof window === "undefined" || typeof navigator === "undefined" || typeof document === "undefined") {
+      return {};
+    }
+    return {
+      tz: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      locale: navigator.language,
+      userAgent: navigator.userAgent,
+      viewport: { w: window.innerWidth, h: window.innerHeight },
+      page: window.location.href,
+      referrer: document.referrer || null,
+    };
+  }, []);
 
-  const handleSubmit = async () => {
+  const handleSubmit = useCallback(async () => {
     if (!email || !description) {
-      toast.error("Preencha todos os campos");
+      toast.error(t("email.toastInvalidForm"));
       return;
     }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setEmailTouched(true);
+      toast.error(t("email.emailInvalid"));
+      return;
+    }
+    if (isSubmitting) return;
 
     setIsSubmitting(true);
-
     try {
       const meta = collectMeta();
 
@@ -34,24 +50,28 @@ export function useEmailRequest() {
       });
 
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+      if (!res.ok) throw new Error(data?.error || `HTTP ${res.status}`);
 
-      toast.success("Solicitação enviada! Confira seu e-mail!");
+      toast.success(t("email.toastSuccess"));
       setEmail("");
       setDescription("");
+      setEmailTouched(false);
       setIsOpen(false);
     } catch (err) {
-      toast.error(err.message || "Falha inesperada");
+      const message = err instanceof Error ? err.message : String(err);
+      toast.error(message || t("email.toastError"));
     } finally {
       setIsSubmitting(false);
     }
-  };
+  }, [email, description, isSubmitting, t, collectMeta]);
 
   return {
     isOpen,
     setIsOpen,
     email,
     setEmail,
+    emailTouched,
+    setEmailTouched,
     description,
     setDescription,
     isSubmitting,

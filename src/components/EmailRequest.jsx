@@ -3,6 +3,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { useEmailRequest } from "../config/email";
+import { useTranslation } from "../locale/Translation";
 
 export default function EmailRequestPopup() {
   const {
@@ -18,7 +19,9 @@ export default function EmailRequestPopup() {
     setEmailTouched,
   } = useEmailRequest();
 
-  const isValidEmail = email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const { t } = useTranslation();
+
+  const isValidEmail = !!email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const isInvalidEmail = emailTouched && email && email.length > 0 && !isValidEmail;
 
   return (
@@ -27,12 +30,12 @@ export default function EmailRequestPopup() {
         <button
           onClick={() => setIsOpen(true)}
           className="fixed bottom-6 right-6 bg-black hover:bg-gray-900 text-white p-4 rounded-full shadow-2xl transition-all duration-300 z-50 group hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/20"
-          aria-label="Solicitar documentação"
+          aria-label={t("email.buttonTooltip")}
           aria-expanded={isOpen}
-          title="Solicitar Documentação"
+          title={t("email.buttonTooltip")}
         >
           <MessageCircle className="w-6 h-6" />
-          <div className="absolute -top-2 -right-2 w-3 h-3 bg-white rounded-full animate-pulse shadow-sm" />
+          <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-sm" />
         </button>
       )}
 
@@ -52,18 +55,18 @@ export default function EmailRequestPopup() {
                 </div>
                 <div>
                   <h3 id="modal-title" className="font-semibold text-white text-sm">
-                    Documentação AI
+                    {t("email.title")}
                   </h3>
                   <p className="text-xs text-gray-400 flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
-                    Geração em tempo real
+                    <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                    {t("email.subtitle")}
                   </p>
                 </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
                 className="p-1.5 hover:bg-white/10 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white/20"
-                aria-label="Fechar modal"
+                aria-label={t("email.closeModal")}
               >
                 <X className="w-4 h-4 text-gray-400 hover:text-white" />
               </button>
@@ -72,7 +75,7 @@ export default function EmailRequestPopup() {
             <div className="p-5 space-y-4">
               <div className="space-y-2">
                 <label htmlFor="email-input" className="block text-sm font-medium text-white">
-                  Email para recebimento
+                  {t("email.emailLabel")}
                 </label>
                 <input
                   id="email-input"
@@ -80,7 +83,7 @@ export default function EmailRequestPopup() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   onBlur={() => setEmailTouched(true)}
-                  placeholder="seu@email.com"
+                  placeholder={t("email.emailPlaceholder")}
                   className={`w-full px-4 py-3 text-sm bg-white/5 border rounded-xl transition-all text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:border-transparent ${
                     isInvalidEmail
                       ? "border-red-400 focus:ring-red-400/50"
@@ -99,24 +102,24 @@ export default function EmailRequestPopup() {
                   }`}
                 >
                   {isInvalidEmail ? (
-                    <span>❌ Email inválido</span>
+                    <span>❌ {t("email.emailInvalid")}</span>
                   ) : isValidEmail ? (
-                    <span>✅ Email válido</span>
+                    <span>✅ {t("email.emailValid")}</span>
                   ) : (
-                    <span>Receberá a documentação personalizada</span>
+                    <span>{t("email.emailHint")}</span>
                   )}
                 </span>
               </div>
 
               <div className="space-y-2">
                 <label htmlFor="description-input" className="block text-sm font-medium text-white">
-                  O que documentar?
+                  {t("email.descriptionLabel")}
                 </label>
                 <textarea
                   id="description-input"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
-                  placeholder="Ex: API de pagamentos, dashboard admin, fluxo de login..."
+                  placeholder={t("email.descriptionPlaceholder")}
                   rows={3}
                   className="w-full px-4 py-3 text-sm bg-white/5 border border-white/20 rounded-xl focus:ring-2 focus:ring-white/30 focus:border-transparent resize-none transition-all text-white placeholder-gray-500"
                   disabled={isSubmitting}
@@ -126,9 +129,11 @@ export default function EmailRequestPopup() {
                 />
                 <div className="flex justify-between items-center">
                   <span id="description-hint" className="text-xs text-gray-400">
-                    Seja específico para melhores resultados
+                    {t("email.descriptionHint")}
                   </span>
-                  <span className="text-xs text-gray-400">{description.length}/300</span>
+                  <span className="text-xs text-gray-400">
+                    {t("email.charCount", { count: description.length, max: 300 })}
+                  </span>
                 </div>
               </div>
 
@@ -140,12 +145,12 @@ export default function EmailRequestPopup() {
                 {isSubmitting ? (
                   <>
                     <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                    Processando...
+                    {t("email.submitting")}
                   </>
                 ) : (
                   <>
                     <Send className="w-4 h-4" />
-                    Gerar Documentação
+                    {t("email.submitButton")}
                   </>
                 )}
               </button>
