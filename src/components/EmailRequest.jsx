@@ -1,4 +1,4 @@
-import { FileText, MessageCircle, Send, X } from "lucide-react";
+import { Mail, MessageCircle, Send, X } from "lucide-react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -43,15 +43,15 @@ export default function EmailRequestPopup() {
         <>
           <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
           <div
-            className="fixed bottom-6 right-6 w-80 bg-black/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/10 z-50 animate-in slide-in-from-bottom-2 duration-300"
+            className="fixed bottom-6 right-6 w-80 bg-black/85 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/10 z-50 animate-in slide-in-from-bottom-2 duration-300"
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"
           >
             <div className="flex items-center justify-between p-4 border-b border-white/10">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-white/10 border border-white/20 rounded-full flex items-center justify-center">
-                  <FileText className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 bg-black/10 border border-white/20 rounded-full flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <h3 id="modal-title" className="font-semibold text-white text-sm">

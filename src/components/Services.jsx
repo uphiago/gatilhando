@@ -31,7 +31,6 @@ const Services = () => {
         />
 
         <div className="relative">
-          {/* Service 1 */}
           <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none select-none md:w-3/5 xl:w-auto">
               <img
@@ -41,6 +40,7 @@ const Services = () => {
                 alt="Smartest AI"
                 src={service1}
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent md:from-n-8/60 md:via-n-8/20 md:to-transparent" />
             </div>
 
             <div className="relative z-1 max-w-[17rem] ml-auto">
@@ -69,8 +69,6 @@ const Services = () => {
 
             <Generating className="absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg:right-auto lg:bottom-8 lg:-translate-x-1/2" />
           </div>
-
-          {/* Service 2 & 3 */}
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
             <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden">
               <div className="absolute inset-0">
@@ -91,7 +89,7 @@ const Services = () => {
               <PhotoChatMessage />
             </div>
 
-            <div className="p-4 bg-black rounded-3xl overflow-hidden lg:min-h-[46rem]">
+            <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="h4 mb-4">{t("services.card3.title")}</h4>
                 <p className="body-2 mb-[2rem] text-n-3">{t("services.card3.text")}</p>
@@ -102,8 +100,8 @@ const Services = () => {
                       key={i}
                       className={`flex items-center justify-center rounded-2xl ${
                         i === 2
-                          ? "w-[3rem] h-[3rem] p-0.25 bg-black md:w-[4.5rem] md:h-[4.5rem]"
-                          : "flex w-10 h-10 bg-n-7 md:w-15 md:h-15"
+                          ? "w-[3rem] h-[3rem] p-0.25 bg-n-6 md:w-[4.5rem] md:h-[4.5rem]"
+                          : "flex w-10 h-10 bg-n-8 md:w-15 md:h-15"
                       }`}
                     >
                       <div
@@ -135,7 +133,7 @@ const Services = () => {
             </div>
           </div>
 
-          <Gradient />
+          {/* <Gradient /> */}
         </div>
       </div>
     </Section>
