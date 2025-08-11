@@ -258,12 +258,12 @@ export const socials = [
   //   iconUrl: twitter,
   //   url: "#",
   // },
-  {
-    id: "2",
-    title: "Instagram",
-    iconUrl: instagram,
-    url: "https://www.instagram.com/flowgatilhando",
-  },
+  // {
+  //   id: "2",
+  //   title: "Instagram",
+  //   iconUrl: instagram,
+  //   url: "https://www.instagram.com/flowgatilhando",
+  // },
   // {
   //   id: "3",
   //   title: "Telegram",

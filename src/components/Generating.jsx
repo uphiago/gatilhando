@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { BeatLoader } from "react-spinners";
+import { useTranslation } from '../locale/Translation';
 
 const Generating = ({ className = "" }) => {
+  const { t } = useTranslation();
+
   return (
     <motion.div
       initial={{ scale: 0.95, opacity: 0 }}
@@ -11,7 +14,7 @@ const Generating = ({ className = "" }) => {
       className={`flex items-center gap-3 h-14 px-6 rounded-full bg-white/10 dark:bg-n-9/40 backdrop-blur-md border border-white/20 dark:border-n-1/20 shadow-lg text-sm font-medium text-n-1 dark:text-n-12 ${className}`}
     >
       <BeatLoader color="#ffffff" size={8} cssOverride={{}} speedMultiplier={0.5} />
-      <span className="animate-pulse">Running Automation...</span>
+      <span className="animate-pulse">{t('services.generating.text')}</span>
     </motion.div>
   );
 };

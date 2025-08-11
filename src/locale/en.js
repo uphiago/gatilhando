@@ -89,5 +89,8 @@ export default {
       playAlt: "Play",
       pauseAlt: "Pause",
     },
+    generating: {
+      text: "Generating...",
+  },
   },
 };
