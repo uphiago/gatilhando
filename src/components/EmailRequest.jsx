@@ -2,7 +2,7 @@ import { ArrowDownRight, Mail, MessageCircle, Send, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { createPortal } from "react-dom";
 import { useEmailRequest } from "../config/email";
 import { useTranslation } from "../locale/Translation";
 
@@ -49,8 +49,8 @@ export default function EmailRequestPopup() {
     };
   }, [isOpen]);
 
-  return (
-    <>
+return createPortal(
+  <>
       {!isOpen && (
         <div
           className={`pointer-events-none fixed bottom-16 right-15 z-[2147483647] flex items-center gap-2 transition-all duration-700 ${
@@ -68,7 +68,7 @@ export default function EmailRequestPopup() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 bg-black hover:bg-gray-900 text-white p-4 rounded-full shadow-2xl transition-all duration-300 z-2147483647 group hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/20"
+          className="fixed bottom-6 right-6 bg-black hover:bg-gray-900 text-white p-4 rounded-full shadow-2xl transition-all duration-300 z-50 group hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/20"
           aria-label={t("email.buttonTooltip")}
           aria-expanded={isOpen}
           title={t("email.buttonTooltip")}
@@ -80,9 +80,9 @@ export default function EmailRequestPopup() {
 
       {isOpen && (
         <>
-          <div className="fixed inset-0 z-2147483647" onClick={() => setIsOpen(false)} />
+          <div className="fixed inset-0 z-[2147483646]" onClick={() => setIsOpen(false)} />
           <div
-            className="fixed bottom-6 right-6 w-80 bg-black/85 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/10 z-2147483647 animate-in slide-in-from-bottom-2 duration-300"
+            className="fixed bottom-6 right-6 w-80 bg-black/85 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/10 z-[2147483647] animate-in slide-in-from-bottom-2 duration-300"
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"
@@ -198,14 +198,15 @@ export default function EmailRequestPopup() {
         </>
       )}
 
-      <ToastContainer
-        position="bottom-right"
-        autoClose={4000}
-        hideProgressBar
-        theme="dark"
-        toastClassName="text-sm rounded-lg shadow-lg border mb-16"
-        style={{ marginBottom: "100px" }}
-      />
-    </>
-  );
+    <ToastContainer
+      position="bottom-right"
+      autoClose={4000}
+      hideProgressBar
+      theme="dark"
+      toastClassName="text-sm rounded-lg shadow-lg border mb-16"
+      style={{ marginBottom: "100px" }}
+    />
+  </>,
+  document.body
+);
 }
