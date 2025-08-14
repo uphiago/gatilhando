@@ -53,7 +53,7 @@ export default function EmailRequestPopup() {
     <>
       {!isOpen && (
         <div
-          className={`pointer-events-none fixed bottom-16 right-15 z-[60] flex items-center gap-2 transition-all duration-700 ${
+          className={`pointer-events-none fixed bottom-16 right-15 z-[1000] flex items-center gap-2 transition-all duration-700 ${
             showNudge ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
           }`}
           aria-hidden="true"
