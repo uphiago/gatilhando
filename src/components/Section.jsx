@@ -21,11 +21,11 @@ const Section = ({ className, id, crosses, crossesOffset, customPaddings, childr
       {children}
 
       <div
-        className="hidden absolute top-0 left-5 w-0.25 h-full bg-stroke-1 pointer-events-none md:block lg:left-7.5 xl:left-10"
+        className="hidden absolute -top-20 left-5 w-0.25 h-[calc(100%+5rem)] bg-stroke-1 pointer-events-none md:block lg:left-7.5 xl:left-10"
         aria-hidden
       />
       <div
-        className="hidden absolute top-0 left-5 w-0.25 h-full bg-stroke-1 pointer-events-none md:block lg:right-7.5 xl:right-10"
+        className="hidden absolute -top-20 left-5 w-0.25 h-[calc(100%+5rem)] bg-stroke-1 pointer-events-none md:block lg:right-7.5 xl:right-10"
         aria-hidden
       />
 
@@ -34,7 +34,7 @@ const Section = ({ className, id, crosses, crossesOffset, customPaddings, childr
           <div
             className={`hidden absolute top-0 left-7.5 right-7.5 h-0.25 bg-stroke-1 ${
               crossesOffset || ""
-            } pointer-events-none lg:block xl:left-10 right-10`}
+            } pointer-events-none lg:block xl:left-10 right-10 z-0`}
             aria-hidden
           />
 
