@@ -54,7 +54,7 @@ const Header = () => {
 
       {/* Container direito */}
       <motion.div
-        className="fixed top-8 right-4 sm:top-7 sm:right-15 z-50 flex items-center gap-4"
+        className="fixed top-[35px] right-4 sm:top-7 sm:right-15 z-50 flex items-center gap-4"
         style={{ opacity, y }}
         onHoverStart={() => hoverFlag.set(1)}
         onHoverEnd={() => hoverFlag.set(0)}
@@ -68,7 +68,7 @@ const Header = () => {
         >
           <Link
             to="/contact"
-            className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium transition-all duration-500 ease-out relative overflow-hidden border ${
+            className={`inline-flex items-center px-4 py-1.5 rounded-full text-xs sm:px-4 sm:py-2 sm:text-sm font-medium transition-all duration-500 ease-out relative overflow-hidden border ${
               location.pathname === "/contact"
                 ? "bg-white text-black border-white"
                 : "bg-white/8 text-white hover:bg-white/15 backdrop-blur-sm border-white/15 hover:border-white/25 hover:shadow-[0_0_20px_rgba(255,255,255,0.06)]"
