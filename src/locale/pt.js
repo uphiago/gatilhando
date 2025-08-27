@@ -1,7 +1,7 @@
 export default {
   hero: {
-    title: "Seu Progresso no Piloto Automático",
-    subtitle: "Deixe os processos rodarem sozinhos enquanto você foca no essencial.",
+    title: "De ponta a ponta, sem fricção",
+    subtitle: "Enquanto os processos acontecem, você constrói o próximo passo.",
   },
   benefits: {
     heading: {
@@ -10,78 +10,78 @@ export default {
     },
     items: {
       0: {
-        title: "Performance Reinventada",
+        title: "Performance reinventada",
         text: "Insights instantâneos. Fluxos de trabalho otimizados. Mais tempo para inovar.",
       },
       1: {
-        title: "Otimize Seus Processos",
+        title: "Otimize seus processos",
         text: "Transforme tarefas repetitivas em processos automatizados e inteligentes, prontos para escalar.",
       },
       2: {
-        title: "Sistemas Integrados, Operações Unificadas",
+        title: "Sistemas integrados, operações unificadas",
         text: "Opere sem interrupções com sistemas que se comunicam perfeitamente.",
       },
       3: {
-        title: "Automatize com Inteligência",
-        text: "Precisão impulsionada por IA que evolui continuamente com o seu negócio.",
+        title: "Automatize com inteligência",
+        text: "Precisão que evolui continuamente com o seu negócio.",
       },
       4: {
-        title: "Visibilidade Total, Controle Completo",
+        title: "Visibilidade total, controle completo",
         text: "Monitoramento abrangente para operações confiáveis e seguras.",
       },
       5: {
-        title: "Sem Fricção. Apenas Fluxo.",
+        title: "Ritmo contínuo. Mais entrega.",
         text: "Agilidade máxima. Zero repetição. Ação imediata.",
       },
     },
   },
   collab: {
     heading: {
-      leading: "Gestão inteligente para um",
-      highlight: "futuro sem limites.",
+      leading: "Tecnologia de última geração",
+      highlight: "aplicada à sua operação",
     },
-    text: "Aprimore seus resultados otimizando tarefas, aplicando padrões e automatizando a conformidade.",
+    text: "Infra estável e resiliente, para operar hoje e crescer sem interrupções.",
     items: {
-      0: { title: "Integração de Sistemas", text: "Conecte seus dados em todas as plataformas." },
-      1: { title: "Fluxos Consistentes", text: "Processos repetíveis, resultados previsíveis." },
-      2: { title: "Conformidade Automatizada", text: "Atenda e supere padrões automaticamente." },
+      0: { title: "Ambientes Interligados", text: "Informação sincronizada entre todas as plataformas." },
+      1: { title: "Operações Padronizadas", text: "Mesmos resultados, em qualquer escala." },
+      2: { title: "Compliance Contínuo", text: "Normas atendidas sem esforço manual." },
     },
   },
   services: {
     heading: {
-      leading: "Velocidade e agilidade em",
-      highlight: "toda operação.",
+      leading: "Operações que",
+      highlight: "não têm limite.",
     },
-    text: "Unifique aplicações, padronize tarefas e cresça sem limites.",
+    text: "Infraestrutura que acompanha seus planos, acelera entregas e reduz retrabalho.",
     card1: {
       title: "Automação. Monitoramento. Escala.",
       text: "É a sua hora de acelerar processos e destravar resultados.",
     },
     card2: {
-      title: "Produtividade Automática",
-      text: "Agende tarefas para rodar sozinhas e acompanhe os ganhos.",
+      title: "Produtividade automática",
+      text: "Execute tarefas automaticamente e acompanhe resultados e custos.",
     },
     card3: {
-      title: "Sistemas Integrados",
-      text: "A forma mais rápida de conectar processos e plataformas. O que você vai criar?",
+      title: "Toda a internet a seu dispor.",
+      text: "Sabemos a forma mais rápida de conectar processos e plataformas. O que você vai criar?",
     },
-    list: ["Gatilhos Inteligentes", "Dashboards 24/7", "Escala Imediata"],
+    list: ["Disparos Automatizados", "Dashboards 24/7", "Escalonamento Instantâneo"],
     ui: {
       gradientAlt: "Gradiente",
     },
     photo: {
       messages: [
         "Conectar todos os sistemas agora.",
-        "Otimizar este fluxo imediatamente.",
-        "Orquestrar backups contínuos.",
-        "Automatizar onboarding de usuários.",
-        "Controle de custos.",
+        "Otimizar este fluxo imediatamente",
+        "Orquestrar backups contínuos",
+        "Automatizar onboarding de usuários",
+        "Controle de custos",
       ],
     },
     video: {
       playing: "Sincronizando dados...",
       done: "Sincronização concluída!",
-      justNow: "agora mesmo",
+      justNow: "Agora mesmo",
       brandAlt: "Dotmind Labs",
       loadingAlt: "Carregando",
     },
@@ -132,6 +132,6 @@ export default {
     responseText: "Geralmente respondemos em 2-4 horas",
     ready: "Pronto",
     copied: "Copiado!",
-    contact: "Contact",
+    contact: "Contato",
   },
 };
