@@ -4,7 +4,7 @@ import ButtonGradient from "./assets/svg/ButtonGradient";
 import Benefits from "./components/Benefits";
 import Collaboration from "./components/Collaboration";
 import Contact from "./components/Contact";
-import EmailRequestForm from "./components/EmailRequest";
+// import EmailRequestForm from "./components/EmailRequest";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -20,7 +20,7 @@ const App = () => {
             element={
               <>
                 <Header />
-                <EmailRequestForm />
+                {/* <EmailRequestForm /> */}
                 <Hero />
                 <Benefits />
                 <Collaboration />
